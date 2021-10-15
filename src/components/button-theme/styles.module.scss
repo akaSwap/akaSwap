@@ -1,0 +1,24 @@
+@import '../../styles/variables.scss';
+:global(.light){
+  .container{
+    background-image: url('./img/switch_light.svg');
+    @media (max-width:849px) {
+      background-image: url('./img/switch_light_mobile.svg');
+    }
+  }
+}
+.container {
+  display: flex;
+  width: 3rem;
+  height: 25px;
+  transition: background-color #{$theme-duration} ease-out,
+  color #{$theme-duration} ease-out;
+  z-index: 1000;
+  cursor: pointer;
+  background-image: url('./img/switch_dark1.svg');
+  @media (max-width:849px) {
+    background-image: url('./img/switch_dark_mobile.svg');
+  }
+  background-repeat: no-repeat;
+  background-position: center;
+}

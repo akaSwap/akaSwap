@@ -1,0 +1,22 @@
+@import '../../styles/layout.scss';
+@import '../../styles/variables.scss';
+
+.page{
+  height:110vh;
+}
+
+.container {
+  position: relative;
+
+  .number {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    padding: 4px;
+    background-color: var(--border-color);
+    opacity: 0.7;
+    color: var(--background-color);
+    transition: background-color #{$theme-duration} ease-out,
+      color #{$theme-duration} ease-out;
+  }
+}

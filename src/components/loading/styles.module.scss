@@ -1,0 +1,67 @@
+@import '../../styles/variables.scss';
+
+.loader {
+    position: fixed;
+    margin-left: 30vw;
+    z-index: 500;
+    transform: translateX(-50%) translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper{
+    width:160px;
+    height:48px;
+    position: fixed;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index:1;
+}
+
+.spinner {
+    z-index: 2;
+    animation: rotate 2s linear infinite;
+    transform: translate(-15%, 0%);
+    width: 200px;
+    height: 200px;
+  }
+  
+  .path {
+    stroke: var(--text-color);
+    stroke-linecap: round;
+    stroke-width:3;
+    fill:none;
+    animation: dash 3s ease-in-out infinite;
+  }
+
+  @keyframes dash {
+    0% {
+      stroke-dasharray: 50,5;
+      stroke-dashoffset: -300;
+    }
+  
+    
+    20% {
+      stroke-dasharray: 50,80;
+      stroke-dashoffset: -200;
+    }
+    
+    80% {
+      stroke-dasharray: 50,10;
+      stroke-dashoffset: -100;
+    }
+    
+  
+    100% {
+      stroke-dasharray: 50, 5;
+      stroke-dashoffset: -300;
+    } 
+}
+  
+
+
+
+

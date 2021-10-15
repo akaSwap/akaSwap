@@ -1,0 +1,51 @@
+.inputTable {
+    width: 100%;
+    vertical-align: middle;
+}
+.withSub {
+    td {
+        height: 2rem;
+        vertical-align: top;
+    }
+    .label {
+        width: 60%;
+    }
+}
+.inputrow {
+    height: auto;
+
+    .label {
+        @media (max-width: 600px) {
+            //width: 5rem;
+        }
+        padding-bottom: 0.7rem;
+        text-align: left;
+        //padding-left: 1rem;
+    }
+    .input {
+        width: 100%;
+        //width: 40%;
+        display: inline-block;
+        vertical-align: middle;
+
+        input::-webkit-input-placeholder {
+            opacity: 1;
+        }
+
+        input::-moz-placeholder {
+            opacity: 1;
+        }
+
+        input:focus::-webkit-input-placeholder {
+            opacity: 1;
+        }
+    }
+}
+.subrow {
+    text-align: left;
+    color: var(--border-color);
+    td {
+        vertical-align: top;
+        height: 4rem;
+    }
+}

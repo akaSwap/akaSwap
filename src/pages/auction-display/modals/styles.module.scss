@@ -1,0 +1,238 @@
+@import '../../../styles/variables.scss';
+
+
+
+.divider{
+  width: 100%;
+  border-bottom: solid 1px var(--border-color);
+  margin-top: 1rem;
+  opacity: 0.3;
+}
+
+.infoText {
+  display:block;
+  padding-top: 20px;
+  color: var(--text-color);  
+}
+.lightText{
+  white-space: pre-wrap;
+  margin-top: 0.5rem;
+  text-align: left;
+  opacity: 0.9;
+  max-height: 10rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  color: var(--text-color);
+  &::-webkit-scrollbar-thumb {
+    width: 100%;
+    height: 18px;
+    background: #ffffff66;
+    border-radius: 2px;
+  }
+  &::-webkit-scrollbar {
+    width: 6px;
+    background: transparent;
+  }
+  .marginleft{
+    opacity: 0.7;
+    margin-left: 0.5rem;
+  }
+  .result{
+    // opacity: 0.7;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-left: 0.5rem;
+  }
+}
+
+.lightlink a{
+  opacity: 0.5;
+
+  &:hover{
+    opacity: 1;
+  }
+}
+
+.collectorList{
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+  padding: 1rem;
+  padding-top:2rem;
+  min-height: 200px;
+
+  @media (max-width:600px){
+    padding-right: 0;
+    padding-left:0; 
+  }
+}
+
+.swapPage{
+
+  display: inline-block;
+  text-align: center;
+  padding: 0px 0px 0px 0px;
+  color: var(--text-color);
+  max-height:70vh;
+  overflow-y: scroll;
+
+  .title{
+    font-size: 1.5em;
+    padding-bottom: 20px;
+  }
+  .thumbnail{
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 30%;
+  }
+  .table{
+    width:100%;
+    vertical-align: middle;
+    .label{
+      width:4rem;
+    }
+    .input{
+      width:100%;
+      display: inline-block;
+      vertical-align: middle;
+      
+      input::-webkit-input-placeholder{
+        opacity: 1;
+      }
+      
+      input::-moz-placeholder{
+        opacity: 1;
+      }
+      
+      input:focus::-webkit-input-placeholder{
+        opacity: 1;
+      }}
+
+  }
+  .detail{
+    margin-top: 5px;
+    font-size:0.5em;
+  }
+}
+
+
+.placeBidPage{
+  display: inline-block;
+  text-align: center;
+  padding: 0px 0px 0px 0px;
+  color: var(--text-color);
+  width: 80%;
+  max-height: 75vh;
+  //overflow-y: scroll;
+  @media(max-width:600px){
+    width: 90%;
+  }
+  
+  .title{
+    font-size: 1.5em;
+    padding-bottom: 20px;
+  }
+  .thumbnail{
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 30%;
+  }
+  .flex{
+    >div{
+      display:flex;
+      text-align: left;
+      margin-bottom: 2rem;
+    }
+    .label{
+      margin-top:1rem;
+      min-width:4rem;
+    }
+    .price{
+      margin-right: 0;
+    }
+    .price input{
+      height:3rem;
+    }
+    .payButton{
+      @media (min-width: 600px){
+        display: flex;
+      }
+    }
+    .pay{
+      width: 100%;
+      margin-right: 1rem;
+      button{
+        border: 1px dashed var(--border-color);
+        border-radius: 0.5rem;
+        color: var(--font-color);
+        padding: 1rem;
+        width:100%;
+        margin-bottom: 0.5rem;
+
+        &:active{
+          color: var(--background-color);
+          background-color: var(--text-color);
+        }
+      }
+      &.selected button{
+        border: 2px solid var(--text-color);
+        margin:-1px;
+        margin-bottom: 0.5rem;
+      }
+    }
+    .sublabel{
+      font-size:0.75rem;
+      opacity: 0.5;
+    }
+  }
+  // .table{
+  //   width:100%;
+  //   vertical-align: middle;
+    
+  //   .row{
+  //     height: auto;
+  //     td{
+  //       height: 2rem;
+  //       vertical-align: top;
+  //     }
+  //   }
+
+  //   .subrow{
+  //     text-align: left;
+  //     color: var(--border-color);
+  //     td{
+  //       vertical-align: top;
+  //       height: 4rem;
+  //     }
+  //   }
+    
+
+  //   .label{
+      
+  //     text-align: left;
+  //     width:60%;
+  //   }
+  //   .input{
+  //     text-align: left;
+  //     width:40%;
+  //   }
+  //   //   display: inline-block;
+  //   //   vertical-align: middle;
+      
+  //   //   input::-webkit-input-placeholder{
+  //   //     opacity: 1;
+  //   //   }
+      
+  //   //   input::-moz-placeholder{
+  //   //     opacity: 1;
+  //   //   }
+      
+  //   //   input:focus::-webkit-input-placeholder{
+  //   //     opacity: 1;
+  //   //   }}
+
+  // }
+  .detail{
+    margin-top: 5px;
+    font-size:0.5em;
+  }
+}

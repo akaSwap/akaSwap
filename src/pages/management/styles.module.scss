@@ -1,0 +1,28 @@
+.mintHeader{
+  font-size:2em;
+  text-align: center;
+  padding: 15px 0 25px 0; 
+}
+
+.mintArea{
+  background-color: #4c4c4c;
+  padding: 25px 0 25px 0; 
+}
+
+.row{
+  box-sizing: border-box;
+  display: flex;
+  align-items: baseline;
+  margin:-0.5rem;
+  >*{
+    margin:0.5rem;
+  }
+  input{
+    --fieldBorderColor: #4c4c4c!important;
+  }
+}
+
+.row:first-child>button,
+.row:first-child>button>div{
+  width: 100%;
+}

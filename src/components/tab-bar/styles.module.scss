@@ -1,0 +1,50 @@
+@import "../../styles/layout.scss";
+
+.buttongroup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  line-height: 50px;
+  cursor: pointer;
+  border-bottom: var(--border-color) solid 1px;
+  box-sizing: border-box;
+
+  .pagebutton {
+    font-size: 16px;
+    padding: 0px 5px 10px;
+    height: 100%;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.2s;
+  }
+  .pagebutton:hover {
+    transform: scale(1.2);
+  }
+
+  .pagebutton_active {
+    padding: 0px 5px;
+    padding-bottom: 10px;
+    transition: transform 0.2s;
+    border-bottom: 2px solid;
+    height: 105%;
+  }
+
+  .pagebutton_active:hover {
+  }
+}
+
+.buttongroupparent {
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+::-webkit-scrollbar {
+  height: 0px;
+  width: 4px; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+::-webkit-scrollbar-thumb {
+  width: 100%;
+  background-color: var(--border-color);
+  border-radius: 4px;
+}

@@ -1,0 +1,82 @@
+@import "./styles/variables.scss";
+
+// to hide the GA tracker text
+.wrapper {
+  color: var(--background-color);
+  display: none;
+}
+:global(.title) {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+:global(.description) {
+  white-space: pre-wrap;
+  padding-right: 1rem;
+  margin-top: 0.5rem;
+  text-align: left;
+  opacity: 0.9;
+  max-height: 10rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  &::-webkit-scrollbar-thumb {
+    width: 100%;
+    height: 18px;
+    background: var(--border-color);
+    border-radius: 2px;
+  }
+  &::-webkit-scrollbar {
+    width: 6px;
+    background: transparent;
+  }
+}
+:global(.text) {
+  font-weight: normal;
+  color: var(--text-color);
+}
+:global(.subTitle) {
+  font-weight: bold;
+  padding-right: 0.3rem;
+  color: var(--text-color);
+}
+:global(.translucent) {
+  opacity: 0.7;
+  color: var(--text-color);
+}
+:global(.link) {
+  position: relative;
+  padding-left: 1.6rem;
+  font-weight: normal;
+  color: var(--text-color);
+  opacity: 0.7;
+  transition: 0.3s;
+  // text-decoration: underline;
+}
+:global(.link::before) {
+  position: absolute;
+  content: "";
+  left: 0.3rem;
+  top: 0.1rem;
+  height: 1rem;
+  width: 1rem;
+  background-color: var(--text-color);
+  -webkit-mask-image: url(./imgs/link.svg);
+  mask-image: url(./imgs/link.svg);
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  margin-right: 0.4rem;
+}
+:global(.link:hover) {
+  transition: 0.3s;
+  opacity: 1;
+  text-decoration: underline;
+  cursor: pointer;
+}
+:global(.margin) {
+  margin-bottom: 0.3rem;
+}
+:global(.divider) {
+  width: 100%;
+  border-bottom: solid 1px var(--border-color);
+  margin-top: 1rem;
+  opacity: 0.3;
+}

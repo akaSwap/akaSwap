@@ -1,0 +1,78 @@
+@import "../../styles/layout.scss";
+@import "../../styles/variables.scss";
+
+.showRecordListButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  button {
+    display: flex;
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: var(--text-color);
+    margin: 2rem 0;
+    align-items: center;
+
+    svg {
+      height: 1rem;
+      transform: rotate(90deg);
+      margin-left: 0.25rem;
+    }
+
+    &:hover {
+      border: 1px solid var(--text-color);
+    }
+  }
+}
+
+.recordList {
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+  padding: 1rem;
+  padding-top: 2rem;
+  min-height: 200px;
+  margin: 3rem 0;
+
+  @media (max-width: 600px) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.recordItem {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color);
+
+  a {
+    color: var(--text-color);
+    &:hover > label {
+      opacity: 1;
+      border-bottom: 1px solid var(--text-color);
+    }
+    > label {
+      opacity: 0.5;
+      display: inline-block;
+      border-bottom: 1px solid transparent;
+    }
+  }
+
+  .item {
+    display: grid;
+    padding: 0px;
+    grid-template-columns: repeat(var(--colFr), 1fr);
+    @media (max-width: 600px) {
+      grid-template-columns: repeat(var(--colFrRWD), 1fr);
+    }
+    .col {
+      grid-column: span var(--colWidth);
+      @media (max-width: 600px) {
+        grid-column: span var(--colWidthRWD);
+        grid-row: span var(--rowSpan);
+      }
+    }
+  }
+}

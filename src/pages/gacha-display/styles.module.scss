@@ -1,0 +1,320 @@
+@import "../../styles/layout.scss";
+@import "../../styles/variables.scss";
+
+.subTitle {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  .time {
+    padding: 1rem 0rem;
+  }
+}
+
+.info {
+  display: grid;
+  grid-template-columns: none;
+  margin-bottom: 2em;
+
+  @include respond-to("tablet") {
+    grid-template-columns: 100%;
+  }
+
+  .left {
+    justify-content: center;
+  }
+  .right {
+    margin-top: 1em;
+    padding: 2rem 0 0 3rem;
+    position: relative;
+    @include respond-from("phone") {
+      padding: 0 20px 0 20px;
+    }
+
+    .main {
+      // width:60%;
+      width: 100%;
+      @include respond-from("tablet") {
+        width: 100%;
+      }
+      @include respond-from("phone") {
+        width: 100%;
+      }
+    }
+
+    .title {
+      text-align: left;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .text {
+      font-size: 1em;
+      color: var(--text-color);
+      opacity: 0.7;
+    }
+    .lightText {
+      white-space: pre-wrap;
+      padding-right: 1rem;
+      margin-top: 0.5rem;
+      text-align: left;
+      opacity: 0.9;
+      max-height: 10rem;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      &::-webkit-scrollbar-thumb {
+        width: 100%;
+        height: 18px;
+        background: #ffffff66;
+        border-radius: 2px;
+      }
+      &::-webkit-scrollbar {
+        width: 6px;
+        background: transparent;
+      }
+    }
+  }
+}
+.right {
+  @include respond-to("tablet") {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.controll {
+  position: relative;
+  margin-top: 3em;
+  margin-right: 20px;
+  margin-left: auto;
+  padding-right: 1rem;
+  text-align: right;
+  justify-content: right;
+  @include respond-from("phone") {
+    right: 0px;
+    margin-right: 0;
+    padding-right: 0;
+  }
+
+  .button {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0em;
+
+    .amount {
+      width: 5rem;
+      text-align: center;
+      border: 1px solid var(--text-color);
+      border-radius: 0.5rem;
+      padding: 1px;
+      margin-right: 1rem;
+      > div {
+        margin-bottom: 0;
+      }
+      input {
+        text-align: center;
+      }
+    }
+    .price {
+      font-size: 1rem;
+      background-color: transparent;
+      color: var(--text-color);
+      text-align: center;
+      border: 1px solid var(--text-color);
+      border-radius: 0.5rem;
+      padding: 1rem 2rem;
+      cursor: pointer;
+      &:active {
+        background-color: var(--text-color);
+        color: var(--background-color);
+      }
+      &:disabled {
+        opacity: 0.5;
+      }
+    }
+    .cancelGacha {
+      font-size: 1rem;
+      background-color: transparent;
+      color: var(--text-color);
+      margin-top: 1rem;
+      width: 250px;
+      text-align: center;
+      border: 2px solid var(--text-color);
+      border-radius: 0.5rem;
+      padding: 1rem 2rem;
+      cursor: pointer;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+  .comment {
+    position: absolute;
+    bottom: -2.5rem;
+    right: 0.8rem;
+    width: 300px;
+  }
+  @include respond-from("phone") {
+    .button .cancelGacha,
+    .button .price {
+      width: 100%;
+    }
+  }
+}
+
+.prize {
+  margin-top: 4rem;
+  padding: 2rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  @include respond-from("phone") {
+    padding: 2rem 0rem;
+  }
+
+  .text {
+    font-size: 1em;
+    color: var(--text-color);
+    opacity: 0.7;
+  }
+
+  .list {
+    .row {
+      display: flex;
+      align-items: center;
+      margin: 0 20px;
+      padding: 1rem 0px;
+      border-bottom: 1px solid var(--border-color);
+
+      @include respond-from("phone") {
+        flex-direction: column;
+      }
+      .thumbnail {
+        width: 150px;
+        padding: 0;
+        display: flex;
+        @include respond-from("phone") {
+          width: 100%;
+        }
+        img {
+          max-width: 100%;
+          max-height: 300px;
+          margin: auto;
+        }
+      }
+      .infoTable {
+        margin-left: 2rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        > div {
+          min-width: 130px;
+        }
+        > div > div {
+          padding: 0.5rem 0;
+        }
+        @include respond-from("phone") {
+          flex-direction: column;
+          margin-left: 0;
+          margin-top: 1rem;
+          > div {
+            display: flex;
+            justify-content: space-between;
+          }
+          .amountRow {
+            justify-content: flex-start;
+            > div {
+              margin-right: 1rem;
+            }
+          }
+        }
+        tr td {
+          padding: 0.5rem 0;
+        }
+      }
+    }
+  }
+}
+.showRecordListButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  button {
+    display: flex;
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: var(--text-color);
+    margin: 2rem 0;
+    align-items: center;
+
+    svg {
+      height: 1rem;
+      transform: rotate(90deg);
+      margin-left: 0.25rem;
+    }
+
+    &:hover {
+      border: 1px solid var(--text-color);
+    }
+  }
+}
+.recordList {
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+  padding: 1rem;
+  padding-top: 2rem;
+  min-height: 200px;
+  margin: 3rem 0;
+
+  @media (max-width: 600px) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.recordItem {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color);
+
+  a {
+    color: var(--text-color);
+    &:hover > label {
+      opacity: 1;
+      border-bottom: 1px solid var(--text-color);
+    }
+    > label {
+      opacity: 0.5;
+      display: inline-block;
+      border-bottom: 1px solid transparent;
+    }
+  }
+
+  .item {
+    display: grid;
+    grid-template-columns: 30% 25% 35% 30%;
+    padding: 0px;
+    @media (max-width: 600px) {
+      grid-template-columns: repeat(9, 1fr);
+      .col6 {
+        grid-column: span 6;
+      }
+      .col5 {
+        grid-column: span 5;
+      }
+      .col4 {
+        grid-column: span 4;
+      }
+      .col3 {
+        grid-column: span 3;
+      }
+      .col2 {
+        grid-column: span 2;
+      }
+      .row2 {
+        grid-row: span 2;
+      }
+    }
+  }
+}

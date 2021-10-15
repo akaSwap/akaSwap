@@ -1,0 +1,51 @@
+.main{
+  border-radius: 1rem;
+  border: 1px solid var(--border-color);
+  padding: 2rem 0;
+  margin: 2rem 0;
+}
+
+.gachaStage{
+  h1{
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 1rem;
+  }
+  li{
+
+    line-height: 1.5em;
+  }
+  .footNotes{
+    line-height: 1.5em;
+    font-size: 0.75rem;
+    margin: 1rem;
+  }
+}
+
+
+.ctaContainer{
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+
+  button{
+    text-align: center;
+    color:var(--text-color);
+    border-radius: 0.5rem;
+    border: 1px solid var(--text-color);
+    padding: 1rem 3rem;
+  }
+}
+
+.processContainer{
+  padding:1rem;
+}
+
+.descList{
+  margin: 1rem;
+  padding-left: 1rem;
+  li{
+    padding-bottom: 1em;
+  }
+}

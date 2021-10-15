@@ -1,0 +1,68 @@
+.shareDescription{
+  text-align: left;
+  font-size: 0.8rem;
+  opacity: 0.8;
+  padding-left: 1rem;
+  margin-top: -0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.shareRow{
+  display: grid;
+  grid-template-columns: 65% 25% 10%;
+  
+  @media (max-width: 600px) {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    grid-template-columns: 70% 30%;
+    div:first-child{
+      grid-column: span 2;
+    }
+  }
+}
+
+.removeRow,
+.addRow{
+  display: inline-flex;
+  justify-content: center;
+  button{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    border-radius: 100%;
+    border: 1px solid var(--text-color);
+    width:1em;
+    height: 1em;
+    margin-top: 0.25rem;
+  }
+  .hoverMessage{
+    position: absolute;
+    display: inline-block;
+    margin-top: -1.5rem;
+    width: 300px;
+    background-color: var(--dropdown-color);
+    font-size: 0.8rem;
+    transform: scale(0);
+    transition: 150ms;
+    z-index: 100;
+    border-radius: 0.5rem;
+    padding:0.2rem 0.2rem;
+  }
+  &:hover{
+    .hoverMessage{
+      transform: scale(1)!important;
+    }
+    opacity: 1;
+  }
+ 
+  button:enabled:hover{
+    opacity: 0.5;
+  }
+  
+}
+.addRow{
+  position:relative;
+  margin-bottom: 1rem;
+}

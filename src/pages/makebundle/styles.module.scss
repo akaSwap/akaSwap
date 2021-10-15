@@ -1,0 +1,129 @@
+@import "../../styles/layout.scss";
+@import "../../styles/variables.scss";
+
+.bundlePage {
+  text-align: center;
+  @media (min-width: 500px) {
+    padding: 3rem 2rem 2rem 2rem;
+  }
+  min-height: 60vh;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  .step {
+    text-align: left;
+    line-height: 2em;
+  }
+}
+
+.title {
+  font-size: 2em;
+  text-align: center;
+  padding: 15px 0 25px 0;
+}
+.subtitle {
+  text-align: center;
+  line-height: 2em;
+}
+.divider {
+  border-top: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.btn {
+  width: auto;
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+  border-radius: 0.5rem;
+  padding: 0.5rem 3rem;
+  margin-top: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.profile {
+  display: flex;
+  text-align: center;
+
+  .info {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-left: 20px;
+    text-align: center;
+    line-height: 2em;
+    color: #1890ff;
+
+    p {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  padding: 6px 0;
+
+  border-top: 1px solid var(--border-color);
+  transition: border-color #{$theme-duration} ease-out;
+  justify-content: space-around;
+
+  & > * {
+    color: #1890ff;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  .buttonLabel {
+    color: black;
+    background-color: #ffeac0;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition-duration: 0.4s;
+  }
+  .buttonLabel:hover {
+    background-color: #ffc700;
+  }
+  .label {
+    color: #1890ff;
+  }
+}
+
+.pagination {
+  display: flex;
+  margin-top: 100px;
+  margin-bottom: 30px;
+
+  .item {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    opacity: 0.2;
+    cursor: pointer;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50) translateY(-50%);
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: var(--text-color);
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &.selected {
+      opacity: 0.8;
+      cursor: initial;
+
+      &:after {
+        background-color: var(--text-color);
+      }
+    }
+  }
+}

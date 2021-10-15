@@ -1,0 +1,217 @@
+.title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.more:hover {
+  font-weight: bold;
+}
+
+.link {
+  color: var(--text-color);
+  opacity: 0.5;
+}
+.link:hover {
+  cursor: pointer;
+}
+
+.collectorList {
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+  padding: 1rem;
+  padding-top: 2rem;
+  min-height: 200px;
+
+  @media (max-width: 600px) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+.hoverMessage {
+  position: absolute;
+  display: inline-block;
+  width: max-content;
+  background-color: var(--dropdown-color);
+  font-size: 0.8rem;
+  transform: scale(0);
+  transition: 150ms;
+  z-index: 100;
+  border-radius: 0.5rem;
+  padding: 0.2rem 0.5rem;
+}
+.swapPage {
+  display: inline-block;
+  text-align: center;
+  padding: 0px 0px 0px 0px;
+  color: var(--text-color);
+  max-height: 70vh;
+  width: 80%;
+
+  .title {
+    font-size: 1.5em;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+  .thumbnail {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 30%;
+  }
+
+  .infoButton {
+    border-radius: 100%;
+    width: 1rem;
+    height: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+    margin: 0 0.5rem;
+    position: relative;
+    font-size: 10px;
+    color: var(--border-color);
+    .hoverMessage {
+      left: 0rem;
+      top: 1.5rem;
+      transform-origin: top left;
+      color: var(--text-color);
+    }
+    &:hover {
+      .hoverMessage {
+        transform: scale(1);
+      }
+    }
+    .table{
+      margin-left: 0.5rem;
+      color: red;
+    }
+  }
+  .detail {
+    margin-top: 5px;
+    font-size: 0.5em;
+  }
+  .shareDescription {
+    text-align: left;
+    font-size: 0.8rem;
+    opacity: 0.8;
+    padding-left: 1rem;
+    margin-top: -0.8rem;
+    margin-bottom: 1.5rem;
+  }
+  .shareRow {
+    display: grid;
+    grid-template-columns: 65% 25% 10%;
+
+    @media (max-width: 600px) {
+      margin-bottom: 1rem;
+      border-bottom: 1px solid var(--border-color);
+      grid-template-columns: 70% 30%;
+      div:first-child {
+        grid-column: span 2;
+      }
+    }
+  }
+  .removeRow,
+  .addRow {
+    display: inline-flex;
+    justify-content: center;
+    button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: var(--text-color);
+      border-radius: 100%;
+      border: 1px solid var(--text-color);
+      width: 1em;
+      height: 1em;
+      margin-top: 0.25rem;
+    }
+    .hoverMessage {
+      position: absolute;
+      display: inline-block;
+      margin-top: -1.5rem;
+      width: 300px;
+      background-color: var(--dropdown-color);
+      font-size: 0.8rem;
+      transform: scale(0);
+      transition: 150ms;
+      z-index: 100;
+      border-radius: 0.5rem;
+      padding: 0.2rem 0.2rem;
+    }
+    &:hover {
+      .hoverMessage {
+        transform: scale(1) !important;
+      }
+      opacity: 1;
+    }
+
+    button:enabled:hover {
+      opacity: 0.5;
+    }
+  }
+  .addRow {
+    position: relative;
+    margin-bottom: 1rem;
+  }
+}
+.raiseBtn {
+  border: 1px dashed var(--border-color);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  color: var(--text-color);
+  margin: 5px;
+  background-color: transparent;
+  @media (max-width: 600px) {
+    width: calc(100% - 10px);
+    padding: 0.5em;
+  }
+  &.selected {
+    border: 2px solid var(--text-color);
+  }
+}
+.raise,
+.swapShare {
+  padding-bottom: 0.7rem;
+  @media (max-width: 600px) {
+    display: grid;
+  }
+  button {
+    border: 1px dashed var(--border-color);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    color: var(--text-color);
+    margin: 5px;
+    background-color: transparent;
+    @media (max-width: 600px) {
+      width: calc(100% - 10px);
+      padding: 0.5em;
+    }
+  }
+  .selected {
+    border: 2px solid var(--text-color);
+  }
+}
+.auctionPage {
+  display: inline-block;
+  text-align: center;
+  padding: 0px 0px 0px 0px;
+  color: var(--text-color);
+  width: 80%;
+  max-height: 70vh;
+
+  .title {
+    font-size: 1.5em;
+    padding-bottom: 20px;
+  }
+  .thumbnail {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 30%;
+  }
+  .detail {
+    margin-top: 5px;
+    font-size: 0.9em;
+  }
+}

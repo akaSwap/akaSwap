@@ -1,0 +1,15 @@
+.square {
+  label{
+    --fieldBorderColor: var(--background-color)!important;
+  }
+  position: relative;
+  width: 100%;
+  padding: 25px 0 25px 0; 
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  text-align: center;
+
+  hr{
+    margin: 20px 0px;
+  }
+}

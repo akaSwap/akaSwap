@@ -1,0 +1,192 @@
+@import '../../styles/variables.scss';
+@import '../../styles/layout.scss';
+
+.gridContainer {
+  // grid-gap: 50px 100px;
+  // grid-template-columns: auto auto auto;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  padding: 2rem;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  justify-content: space-between;
+
+  @include respond-to('tablet') {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include respond-to('desktop') {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  @include respond-from('phone'){
+    padding: 0;
+    
+    .gridItem {
+      margin: 0px;
+    }
+  }
+
+  .gridItem {
+    margin: 10px;
+    
+    // width: 31%;
+    // float: left;
+    // margin:1.1%;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    padding: 20px;
+    font-size: 1.4em;
+    justify-content: center;
+    position: relative;
+
+    >div{
+      // border: 1px solid red;
+      margin-top: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .cover{
+      margin: 0;
+      position: absolute;
+      top: 3rem;
+      left: 0;
+      right: 0;
+      bottom: 5.5rem;
+      font-size: 1.2rem;
+      text-align: center;
+      z-index: 500;
+      background-color: var(--border-color);
+
+      @include respond-to('tablet') {
+        bottom: 4.5rem;
+      }
+
+      .titleEnd{
+        position: absolute;
+        // width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        // color: var(--border-color);
+        background-color: var(--background-color);
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        opacity: 0.9;
+      }
+    }
+
+    .topInfo{
+      text-align: right;
+      display: flex;
+
+      .id{
+        text-align: left;
+        max-width:75%;
+        max-height: 3rem;
+        overflow-y: hidden;
+        margin-right: auto;
+        font-weight: bold;
+      }
+
+      .issueTime{
+        margin-right: 1.0rem;
+        padding: 0rem 0.3rem;
+        color: var(--background-color);
+        background-color: var(--text-color);
+        border-radius: 0.2rem;
+        border: 1px solid var(--border-color);
+        transform: translateY(-0.15rem);
+      }
+
+      .icon{
+        fill: var(--text-color);
+        height: 1.3em;
+        width: 1.3em;
+        margin-right: 4px;
+      }
+      .amount{
+        margin-top: 0px;
+      }
+    }
+
+    .bottomInfo{
+      display:flex;
+      align-items: center;
+      @include respond-from('phone') {
+        align-items: stretch;
+        flex-direction: column;
+      }
+      margin-top: 25px;
+      color: var(--text-color);
+      width: 100%;
+      justify-content: space-between;
+      >div{
+        min-width: 4rem;
+        max-height: 4rem;
+      }
+      
+      .amount{
+        display:flex;
+        text-align: right;
+        align-items: center;
+        justify-content: flex-end;
+      }
+
+      .title{
+        margin: 0.5rem 0;
+      }
+
+      .description{
+        max-width: 75%;
+        white-space: pre-wrap;
+        padding-right: 1rem;
+        margin-top: 0.5rem;
+        text-align: left;
+        max-height: 2.5rem;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        &::-webkit-scrollbar-thumb {
+          width: 100%;
+          height: 18px;
+          background: #ffffff66;
+          border-radius: 2px;
+        }
+        &::-webkit-scrollbar {
+          width: 6px;
+          background: transparent;
+        }
+      }
+    }
+
+    .thumbnail{
+      //width: 100px;
+    }
+    .price{
+          
+      text-align: center;
+      border: 1px solid var(--border-color);
+      border-radius: 0.5rem;
+      padding: 4px 8px;
+      @include respond-to('tablet'){
+        margin-left: 10px;
+        margin-right: -6px;
+      }
+      &.ended{
+        opacity: 0.5;
+      }
+    }
+  }
+}
+*{
+}
+:global(.light){
+  :global(.cls-1){
+    fill:#000!important;
+  }
+  :global(.cls-1),
+  :global(.cls-2){
+    stroke: #000!important;
+  }
+}

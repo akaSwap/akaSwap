@@ -1,0 +1,81 @@
+
+@import '../../styles/variables.scss';
+@import '../../styles/layout.scss';
+
+.process{    
+    width: 100%;
+    --circle-count:0;
+    --circle-size: 1.5em;
+    --circle-margin: 0rem;
+    --transition: 250ms;
+    --line-width:2px;
+    font-size: 2.5rem;
+    margin-top: calc(var(--circle-size)/2);
+    margin-bottom: calc(var(--circle-size)/-2);
+    line-height: 1.5em;
+    @include respond-from('phone'){
+        font-size: 2rem;
+    }
+}
+
+.circle{
+    padding-bottom: 0.1em;
+    border-radius: 100%;
+    background-color: var(--dropdown-color);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:var(--circle-size);
+    width: var(--circle-size);
+    transition: var(--transition);
+    border: calc(var(--line-width) *1.5) solid var(--dropdown-color);
+}
+.selected{
+    border-color: var(--text-color);
+}
+
+.circlesWrapper{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: relative;
+    transform: translate(0, -50%);
+}
+.progressBar{
+    background-color: var(--dropdown-color);
+    height:var(--line-width);
+    width:100%;
+    padding:0 calc(var(--circle-size)/2);
+
+    .progress{
+        height: 100%;
+        background-color: var(--text-color);
+        transition: var(--transition);
+    }
+}
+.vert.process{
+    width: auto;
+    height: calc(var(--circle-count)*var(--circle-size) + (var(--circle-count) - 1)*var(--circle-margin));
+    margin-top:0;
+    margin-bottom:0;
+    margin-left:calc(var(--circle-size)/2) ;
+    margin-right:calc(var(--circle-size)/ -2);
+    .circlesWrapper{
+        margin: 0;
+        flex-direction: column;
+        height: 100%;
+        width:auto;
+        transform: translate(-50%, -100%);
+    }
+
+    .progressBar{
+        height:100%;
+        width:var(--line-width);
+        padding: calc(var(--circle-size)/2) 0;
+        .progress{
+            height: auto;
+            width: 100%;
+        }
+    }
+
+}

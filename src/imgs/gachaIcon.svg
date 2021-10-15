@@ -1,0 +1,12 @@
+<svg id="圖層_1" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" viewBox="10 10 328 322">
+<defs><style>
+.cls-1{fill:#fff;}
+.cls-1,.cls-2{stroke:#fff;stroke-miterlimit:10;stroke-width:9px;}
+.cls-2,.cls-3{fill:none;}
+</style>
+</defs><title>gachaIcon</title>
+<path class="cls-1" d="M160.64,51.28a102,102,0,1,1-102,102,102.11,102.11,0,0,1,102-102m0-8a110,110,0,1,0,110,110,110,110,0,0,0-110-110"/>
+<path class="cls-2" d="M269.26,135.83a157.48,157.48,0,0,1-215.48-8.7"/>
+<path class="cls-2" d="M137.56,120.25c-7.46,14.17-22.42,21-33.41,15.19s-13.88-22-6.42-36.13,22.41-21,33.41-15.2S145,106.07,137.56,120.25Z"/>
+<!-- <rect class="cls-3" width="328" height="322"/> -->
+</svg>

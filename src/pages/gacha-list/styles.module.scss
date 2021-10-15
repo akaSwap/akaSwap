@@ -1,0 +1,22 @@
+@import '../../styles/variables.scss';
+@import '../../styles/layout.scss';
+
+.title{
+  font-size:2em;
+  text-align: center;
+  padding: 15px 0 25px 0; 
+}
+.gachalist{
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  min-height: 60vh;
+  justify-content: space-between;
+
+  @media (max-width: 600px){
+      margin: 0 20px;
+    
+  }
+  >div{
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}

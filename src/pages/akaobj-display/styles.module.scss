@@ -1,0 +1,134 @@
+.info {
+    display: block;
+    padding-top: 20px;
+    color: var(--text-color);
+    padding-left: 3rem;
+    @media (max-width: 600px) {
+        padding-left: 1rem;
+    }
+}
+
+.control {
+    margin-left: auto;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    > div {
+        padding: 1rem;
+    }
+    @media (max-width: 600px) {
+        flex-direction: column;
+    }
+}
+.showRecordListButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    button {
+        display: flex;
+        background-color: transparent;
+        border: 1px solid var(--border-color);
+        border-radius: 0.5rem;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        color: var(--text-color);
+        margin: 2rem 0;
+        align-items: center;
+        transition: 150ms;
+
+        svg {
+            height: 1rem;
+            transform: rotate(90deg);
+            margin-left: 0.25rem;
+        }
+
+        &:hover {
+            border: 1px solid var(--text-color);
+        }
+    }
+}
+.recordList {
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    padding-top: 2rem;
+    min-height: 200px;
+    margin: 3rem 0;
+
+    @media (max-width: 600px) {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+.recordItem {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+
+    a {
+        color: var(--text-color);
+        &:hover > label {
+            opacity: 1;
+            border-bottom: 1px solid var(--text-color);
+        }
+        > label {
+            opacity: 0.5;
+            display: inline-block;
+            border-bottom: 1px solid transparent;
+        }
+    }
+
+    .item {
+        display: grid;
+        grid-template-columns: 24% 18% 25% 18% 8% 20%;
+        padding: 0px;
+        @media (max-width: 600px) {
+            grid-template-columns: repeat(9, 1fr);
+            .col6 {
+                grid-column: span 6;
+            }
+            .col5 {
+                grid-column: span 5;
+            }
+            .col4 {
+                grid-column: span 4;
+            }
+            .col3 {
+                grid-column: span 3;
+            }
+            .col2 {
+                grid-column: span 2;
+            }
+            .row2 {
+                grid-row: span 2;
+            }
+        }
+    }
+}
+
+.collectorList {
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    padding-top: 2rem;
+    min-height: 200px;
+
+    @media (max-width: 600px) {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+a.link {
+    cursor: pointer;
+    color: var(--text-color);
+    display: inline-block;
+    border-bottom: 1px solid var(--text-color);
+    transition: 150ms;
+    &:hover {
+        opacity: 0.5;
+    }
+}

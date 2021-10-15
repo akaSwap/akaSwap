@@ -1,0 +1,388 @@
+{
+    "bundle": "同捆包説明",
+    "quickstart": "快速上手",
+    "gacha": "抽獎包説明",
+    "auction": "拍賣説明",
+    "title": "akaSwap",
+    "otherthings":"其他說明",
+    "paragraphs": [
+        "我們致力於建置一個簡易、友善、公開、綠色的NFT交易平台，讓大家都可以輕鬆創作、交易、鑑賞、推廣、收藏來自全世界各種NFT有價資產。",
+        "akaSwap希望協助藝術家獲得新的收入來源，並爲收藏家提供儲存及交易藝術品的場所。藝術家可以拍賣自己的創作，也能以自訂的價格出售。",
+        ""
+    ],
+    "akaobj": {
+        "title": "什麼是akaOBJ？",
+        "description": "在akaSwap上所鑄造的NFT(Non-fungible Token)，我們將之稱為「akaOBJ」。它可以是圖片、影片、聲音、視覺藝術等多種形式，您可以在aksSwap裡自由的交易，交易的同時您也會獲得akaDAO作為獎勵。"
+    },
+    "akaDAO": {
+        "title": "什麼是akaDAO？",
+        "images": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "description": [
+            "於買賣NFT時會獲得的虛擬代幣，目的是促使akaSwap平台形成經濟循環體。",
+            "akaDAO是種FA2代幣，總量固定為100萬顆。而akaDAO的單位能分割至小數點以下六位數",
+            "發放規則 : akaDAO共分為五個階段發放，每階段發放10萬顆akaDAO",
+            "買賣成交時按成交價之一定比例的發放akaDAO給買家及賣家（單筆交易超過50xtz以50xtz計算）",
+            "該比例將隨著階段的推進而降低",
+            "為了鼓勵大家參與抽獎包活動，抽獎包的交易發放的akaDAO比例較其他交易高",
+            "製作抽獎包將需要支付akaDAO，未來我們舉辦的特殊活動可能也會讓使用者以akaDAO進行操作",
+            "平台保留之akaDAO在未來也會以獎勵的形式發放給大家"
+        ]
+    },
+    "mintNFT": {
+        "title": "如何鑄造作品?",
+        "images": [
+            "./imgs/sync.png",
+            "./imgs/make-nft-1.png",
+            "./imgs/make-nft-2.png",
+            "./imgs/make-nft-2-1.png",
+            "./imgs/make-nft-2-2.png",
+            "./imgs/make-nft-3.png",
+            "./imgs/tezos-comeout.png",
+            "./imgs/mypage-creation.png"
+        ],
+        "mintNFTDescription": [
+            "確認您的錢包已登入",
+            "點選菜單中的鑄造，選擇NFT",
+            "填寫akaOBJ的訊息，包含上傳作品、名稱、敘述、設定版權費分潤等等",
+            "將版權費分潤開啟，便可新增共同創作者",
+            "輸入共同創作者的錢包地址，及分配比例",
+            "點擊預覽查看作品樣貌",
+            "點擊鑄造，此時會跳出錢包，您必須在錢包上點選確認",
+            "鑄造完成後，查看個人頁面的創作一覽列表，通常需要一些時間才會顯示出來"
+        ]
+    },
+    "mintInteractiveNFT": {
+        "title": "如何鑄造互動式作品?",
+        "images": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "mintInteractiveNFTDescription": [
+            "基本鑄造過程與一般作品相同，但以下有幾項需要您特別注意。",
+            "準備好您的檔案，上傳前請將它壓縮成.zip",
+            "主要的檔案需命名為index.html，並且確定裡頭的所有路徑都是相對路徑",
+            "您需要準備一張封面圖片，它可以是任何形式的圖片(JPEG、PNG、GIF)，在鑄造時會要求您上傳",
+            "請確認您所有用到的資料都已包進資料夾中，以免發生錯誤",
+            "akaSwap建議您以這幾個範本修改成您的作品 : "
+        ]
+    },
+    "swapNFT": {
+        "title": "如何發售作品?",
+        "images": [
+            "./imgs/sync.png",
+            "./imgs/swap-1.png",
+            "./imgs/swap-2.png",
+            "./imgs/swap-2-2.png",
+            "",
+            "./imgs/tezos-comeout.png"
+        ],
+        "swapNFTDescription": [
+            "確認您的錢包已登入",
+            "於作品頁面中，你會看到收藏欄位中自己的位址，點選[發售]按鈕",
+            "填寫數量與單價，選擇是否開啟銷售分潤，若無需開啟銷售分潤跳至第5步驟",
+            "若開啟銷售分潤，請填寫分潤者錢包地址及分潤比例",
+            "點擊[發售]",
+            "此時會跳出錢包，您必須在錢包上點選確認"
+        ]
+    },
+    "cancelswapNFT": {
+        "title": "如何取消發售作品?",
+        "images": [
+            "./imgs/sync.png",
+            "./imgs/cancelswap.png",
+            "./imgs/tezos-comeout.png"
+        ],
+        "cancelswapNFTDescription": [
+            "確認您的錢包已登入",
+            "於作品頁面的發售中欄位點選[下架]按鈕，此時會跳出錢包，您必須在錢包上點選確認",
+            "作品將下架回您的收藏，成為非賣品"
+        ]
+    },
+    "buyNFT": {
+        "title": "如何購買作品?",
+        "images": [
+            "./imgs/sync.png",
+            "./imgs/buy-nft.png",
+            "./imgs/tezos-comeout.png",
+            "./imgs/mypage-collection.png"
+        ],
+        "buyNFTDescription": [
+            "確認您的錢包已登入",
+            "於作品頁面中點選[花費]或是[收藏]來購買作品",
+            "此時會跳出錢包，您必須在錢包上點選確認",
+            "購買完成後，查看個人頁面的藝術收藏列表，通常需要一些時間才會顯示出來"
+        ]
+    },
+    "burnNFT": {
+        "title": "如何銷毀作品?",
+        "images": [
+            "./imgs/sync.png",
+            "./imgs/burn-1.png",
+            "./imgs/burn-2.png",
+            "./imgs/comfirm-burn.png",
+            "./imgs/tezos-comeout.png"
+        ],
+        "burnNFTDescription": [
+            "確認您的錢包已登入",
+            "於作品頁面的收藏欄位點選[銷毀]按鈕",
+            "設定要銷毀的作品數量",
+            "確認真的要銷毀作品，點選[確定]",
+            "此時會跳出錢包，您必須在錢包上點選確認"
+        ]
+    },
+    "mintbundle": {
+        "title": "如何鑄造同捆包?",
+        "images": [
+            "./imgs/sync.png",
+            "./imgs/make-bundle-1.png",
+            "./imgs/make-bundle-3.png",
+            "./imgs/make-bundle-4.png",
+            "./imgs/tezos-comeout.png"
+        ],
+        "mintbundleDescription": [
+            "確認您的錢包已登入",
+            "點選菜單中的鑄造，選擇同捆包",
+            "選擇要包裹的作品項目並設定每一個的數量",
+            "填寫同捆包的訊息，包含名稱、敘述等等，點擊下一步",
+            "此時會跳出錢包，您必須在錢包上點選確認"
+        ]
+    },
+    "gachastage": {
+        "title": "抽獎階段說明",
+        "gachastageDescription": [
+            "鑄造抽獎包相關條件將受抽獎階段影響，詳細說明請見抽獎階段公告→"
+        ]
+    },
+    "mintgacha": {
+        "title": "如何鑄造抽獎包?",
+        "images": [
+            "./imgs/sync.png",
+            "./imgs/make-gacha-1.png",
+            "./imgs/make-gacha-3.png",
+            "./imgs/make-gacha-4.png",
+            "./imgs/make-gacha-5.png",
+            "./imgs/tezos-comeout.png"
+        ],
+        "mintgachaDescription": [
+            "確認您的錢包已登入",
+            "點選菜單中的鑄造，選擇抽獎包",
+            "選擇要包裹的作品項目並設定每一個的數量",
+            "選擇要做為最後賞的作品，此作品只會有一個",
+            "填寫抽獎包的訊息，包含名稱、敘述和天數等等，點擊下一步",
+            "此時會跳出錢包，您必須在錢包上點選確認"
+        ]
+    },
+    "auctionakaOBJ": {
+        "title": "如何拍賣我的作品?",
+        "images": [
+            "./imgs/sync.png",
+            "./imgs/auction-1.png",
+            "./imgs/auction-2.png",
+            "./imgs/tezos-comeout.png"
+        ],
+        "auctionakaOBJDescription": [
+            "確認您的錢包已登入",
+            "於作品頁面的收藏欄位中點選[拍賣]按鈕",
+            "填寫起標價、直購價、每口叫價以及拍賣天數，點擊[拍賣]",
+            "此時會跳出錢包，您必須在錢包上點選確認"
+        ]
+    },
+    "auctionothers": {
+        "title": "如何競標他人的作品?",
+        "images": [
+            "./imgs/sync.png",
+            "./imgs/auction-it-1.png",
+            "./imgs/auction-it-2.png",
+            "./imgs/auction-it-3.png",
+            "./imgs/auction-it-4.png",
+            "./imgs/tezos-comeout.png"
+        ],
+        "auctionothersDescription": [
+            "確認您的錢包已登入",
+            "於市集的拍賣欄位中選取想競標的作品",
+            "您可以選擇以直購價購買，或者出價",
+            "出價視窗跳出，所顯示的金額為最低出價金額",
+            "您可以選擇一次付清，或者先支付10%的費用(剩餘的90%可以在競標結束前、得標後補上)，按下[競標]",
+            "此時會跳出錢包，您必須在錢包上點選確認",
+            "***於該作品的出價紀錄中看見您的出價",
+            "***可以對同件作品重複出價",
+            "***若在得標之後24小時仍未支付完全費用，創作者可宣布此次競標為流標"
+        ]
+    },
+    "cancelauction": {
+        "title": "下架自己的拍賣",
+        "images": [
+            "./imgs/discontinue-auction.png"
+        ],
+        "cancelauctionDescription": [
+            "在無人下標的情況下，您可以將已上架的拍賣作品下架，在作品拍賣頁面上點選[下架]按鈕，此時會跳出錢包，您必須在錢包上點選確認"
+        ]
+    },
+    "buygacha": {
+        "title": "如何購買抽獎包?",
+        "images": [
+            "./imgs/sync.png",
+            "./imgs/buy-gacha-1.png",
+            "./imgs/tezos-comeout.png",
+            "./imgs/mypage-colletion.png"
+        ],
+        "buygachaDescription": [
+            "確認您的錢包已登入",
+            "於抽獎頁面中點擊想抽的抽獎包，設定一次要抽幾抽，再點擊花費按鈕",
+            "此時會跳出錢包，您必須在錢包上點選確認",
+            "購買完成後，查看個人頁面的禮包列表，通常需要一些時間才會顯示出來"
+        ]
+    },
+    "buybundle": {
+        "title": "如何購買同捆包",
+        "images": [
+            "./imgs/sync.png",
+            "./imgs/buy-bundle-1.png",
+            "./imgs/tezos-comeout.png",
+            "./imgs/mypage-colletion.png"
+        ],
+        "buybundleDescription": [
+            "確認您的錢包已登入",
+            "在市集中點選同捆包頁籤，選擇要購買的同捆包，點選花費按鈕",
+            "此時會跳出錢包，您必須在錢包上點選確認",
+            "購買完成後，查看個人頁面的禮包列表，通常需要一些時間才會顯示出來"
+        ]
+    },
+    "Howtoverifyaccount": {
+        "title": "如何驗證自己的帳號",
+        "images": [
+            "./imgs/tzkt-4.png",
+            "",
+            ""
+        
+            
+        ],
+        "HowtoverifyaccountDescription": [
+            "填妥TzKT表格 ",
+            "填完後追蹤此@TezosBakingBad推特帳號，若沒有追蹤可能會申請失敗，通常需要1~3天工作天驗證帳號",
+            "若您沒有推特帳號，可以通過電子郵件聯繫:"
+            
+        ]
+    },
+    "Howtogettezos": {
+        "title": "如何取得tezos測試幣? [僅限testnets版]",
+        "images": [
+            "./imgs/florencetestnet-1.png",
+            "./imgs/florencetestnet-2.png",
+            "./imgs/florencetestnet-3.png",
+            "./imgs/florencetestnet-4.png",
+            "./imgs/florencetestnet-5.png",
+            "./imgs/florencetestnet-6.png"
+            
+        ],
+        "HowtogettezosDescription": [
+            "到Faucet下載水龍頭檔案",
+            "下載獲得的檔案",
+            "登入錢包，先將網路切換到Florence Testnet",
+            "點選匯入帳戶",
+            "選擇使用水龍頭檔案，將下載好的json匯入，按 [ 提交 ] ",
+            "會獲得一個新錢包，裡頭已匯入測試幣"
+            
+        ]
+    },
+    "Howtousetags":{
+        "title":"如何使用標籤尋找作品?",
+        "images":[
+          "./imgs/tag.png",
+          ""
+                
+        ],
+          "HowtousetagsDescription": [
+          "於首頁標籤搜尋欄位打上想搜尋的關鍵字，接著按下鍵盤上的Enter ",
+          ""
+        ]
+      },
+    "auctionrules": {
+        "title": "拍賣成交相關規則",
+        "images": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "auctionrulesDescription": [
+            "直購",
+            "◢買方選擇直購，則買賣直接成立，作品及價格轉移後關閉該拍賣",
+            "結標&棄標",
+            "◢買方進行[全額競標]或[10%競標且已補上90%價格]，結標時間結束後",
+            " 買賣成立，不可棄標",
+            " 買賣雙方及平台方皆可宣布結標",
+            "◢買方進行[10%競標但未補上90%價格]",
+            "若在結標時間後24小時仍未補上，賣方及平台皆可宣布買方棄標",
+            "10%的費用將有1/4轉給平台方，剩餘3/4轉給賣方",
+            "只要無人宣布棄標，買方皆還有機會補上90%的價格",
+            "棄標會累積違規點數，違規達3次者將無法進行競標",
+            "無論是直購或結標，價格將照普通的買賣發放版權費、平台費用等",
+            "買賣雙方也將依成交價發放akaDAO"
+        ]
+    },
+    "curate": {
+        "title": "如何投票給喜歡的作品?",
+        "images": [
+            "./imgs/curate-1.png",
+            "./imgs/curate-2.png"
+        ],
+        "curateDescription": [
+            "您可以點擊圖示表達對作品的支持，同時會向您收取0.001akaDAO",
+            "圖示左方會顯示當前票數"
+        ]
+    },
+    "royaltiesshare":{
+        "title":"什麼是【版權費分潤】與【銷售分潤】 ?",
+        "images":[
+          "",
+          "",
+          "./imgs/royalty_share.png",
+          "",
+          "",
+          "",
+          "./imgs/swap_share.png",
+          ""                
+        ],
+          "royaltiesshareDescription": [
+            "【版權費分潤】",
+            "版權費為每次交易時需給原創作者的費用，如果您有共創者或合作夥伴，則可開啟「版權費分潤」功能來分配版權費。",
+            "「版權費分潤」須於鑄造時設定，舉例來說：",
+            "* 操作辦法請見「如何鑄造作品？」",
+            "【銷售分潤】",
+            "每次發售作品時，若您有和夥伴們共享收益的需求，則可開啟「銷售分潤」功能來分配收益。（例如您可能是與藝術家們合作的藝廊）",
+            "「銷售分潤」須於發售時設定，舉例來說：",
+            "* 操作辦法請見「如何發售作品？」"                      
+        ]
+          
+      },
+      "webspeed":{
+        "title":"其他說明",
+        "images":[
+          "",
+          ""                
+        ],
+          "webspeedDescription": [
+            "【關於存取速度】",
+            "網站的資料放在ipfs星際網路，是去中心化的p2p存取系統，世界正在從web2到web3，所以存取速度有時比較不正常，請給區塊鏈一些時間。"                      
+        ]
+          
+      },
+    "giveMoney": {
+        "description": "",
+        "linkName": ""
+    }
+}

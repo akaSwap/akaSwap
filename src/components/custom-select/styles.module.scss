@@ -1,0 +1,53 @@
+.form{
+    --background-color: white;
+    --text-color: black;
+    width: 100%;
+    input{
+        border-radius: 0.5rem;
+        background-color: var(--background-color);
+        color: var(--text-color);
+        width: 100%;
+        padding: 0.5rem;
+        border: none;
+    }
+    &.focused{
+        input{
+            border-radius: 0.5rem 0.5rem 0 0;
+        }
+        
+    }
+    datalist{
+        color: var(--text-color);
+        border-radius: 0 0 0.5rem 0.5rem;
+        background-color: var(--background-color);
+    }
+    option{
+        margin: 0.5rem;
+    }
+    option.active{
+        opacity: 0.5;
+    }
+    button{
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 0.5rem;
+        background-color: transparent;
+        border: none;
+    }
+}
+form{
+    z-index: 200;
+    input:focus{
+        outline: none;
+    }
+}
+datalist{
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    overflow-y: scroll;
+    max-height: 300px;
+    width: 100%;
+    position: absolute;
+}

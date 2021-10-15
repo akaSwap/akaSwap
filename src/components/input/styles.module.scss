@@ -1,0 +1,665 @@
+@import "../../styles/variables.scss";
+
+:global(.light) {
+  .container {
+    .widefield {
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+        background-image: url("img/number-dark.png");
+        // opacity: 1;
+      }
+    }
+    .field {
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+        background-image: url("img/number-dark-s.png");
+        background-size: contain;
+        // opacity: 1;
+      }
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  margin-bottom: 10px;
+  position: relative;
+  // border: 1px dashed red;
+
+  --uiFieldBorderWidth: var(--fieldBorderWidth, 2px);
+  --uiFieldPaddingRight: var(--fieldPaddingRight, 1rem);
+  --uiFieldPaddingLeft: var(--fieldPaddingLeft, 1rem);
+
+  text-align: left;
+
+  .field__input {
+    width: 100%;
+    --uiFieldPlaceholderColor: var(--border-color);
+
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    font-family: inherit;
+    font-size: inherit;
+
+    box-sizing: border-box;
+    width: var(--fieldWidth, 100%);
+    height: var(--fieldHeight, 3rem);
+    padding-left: var(--uiFieldPaddingLeft);
+    border-bottom: var(--uiFieldBorderWidth) solid var(--fieldBorderColor, rgba(0, 0, 0, 0.25));
+    color: var(--text-color);
+    font-weight: bold;
+  }
+
+  .field__input:focus {
+    outline: none;
+  }
+
+  .field__input::-webkit-input-placeholder {
+    opacity: 0.5;
+    transition: opacity 0.2s ease-out;
+  }
+  .field__input::-moz-placeholder {
+    color: var(--border-color);
+    opacity: 0.5;
+    transition: opacity 0.2s ease-out;
+  }
+  .field__input:focus::-webkit-input-placeholder {
+    color: var(--border-color);
+    opacity: 0.5;
+    transition-delay: 0.2s;
+  }
+  .field__input:disabled {
+    opacity: 0.5;
+  }
+  .field__input:focus::-moz-placeholder {
+    opacity: 1;
+    transition-delay: 0.2s;
+  }
+  .field__input:-webkit-autofill {
+    background-color: var(--background-color) !important;
+    -webkit-box-shadow: 0 0 0px 1000px var(--background-color) inset !important;
+    -webkit-text-fill-color: var(--text-color);
+    transition: background-color 999999999999999s ease-in-out 0s;
+  }
+  .field__input:focus ~ .field__label_wrap::after {
+    opacity: 1;
+
+    transform: translate3d(0, 0, 0);
+    transition-delay: 0;
+  }
+
+  .textarea {
+    width: 100%;
+    --uiFieldPlaceholderColor: var(--background-color);
+    margin-top: 0.9rem;
+    overflow-y: scroll;
+
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    font-family: inherit;
+    font-size: inherit;
+
+    box-sizing: border-box;
+    width: var(--fieldWidth, 100%);
+    height: var(--fieldHeight, 6rem);
+    padding-left: var(--uiFieldPaddingLeft);
+    box-sizing: border-box;
+    border-bottom: var(--uiFieldBorderWidth) solid var(--fieldBorderColor, rgba(0, 0, 0, 0.25));
+    color: var(--text-color);
+    font-weight: bold;
+  }
+
+  .textarea:focus {
+    outline: none;
+  }
+
+  .textarea::-webkit-input-placeholder {
+    opacity: 0.5;
+    transition: opacity 0.2s ease-out;
+  }
+  .textarea::-moz-placeholder {
+    color: var(--border-color);
+    opacity: 0.5;
+    transition: opacity 0.2s ease-out;
+  }
+  .textarea:focus::-webkit-input-placeholder {
+    color: var(--border-color);
+    opacity: 0.5;
+    transition-delay: 0.2s;
+  }
+  .textarea:disabled {
+    opacity: 0.5;
+  }
+  .textarea:focus::-moz-placeholder {
+    opacity: 1;
+    transition-delay: 0.2s;
+  }
+  .textarea:-webkit-autofill {
+    background-color: var(--background-color) !important;
+    -webkit-box-shadow: 0 0 0px 1000px var(--background-color) inset !important;
+    -webkit-text-fill-color: var(--text-color);
+    transition: background-color 999999999999999s ease-in-out 0s;
+  }
+  .textarea:focus ~ .field__label_wrap::after {
+    opacity: 1;
+
+    transform: translate3d(0, 0, 0);
+    transition-delay: 0;
+  }
+  .textarea:focus ~ .field__label_wrap .field__label,
+  .textarea:not(:placeholder-shown) ~ .field__label_wrap .field__label {
+    --fieldHintFontSize: var(--fieldHintFontSizeFocused, 0.75rem);
+
+    top: var(--fieldHintTopHover, 0.25rem);
+  }
+
+  .field__label_wrap {
+    box-sizing: border-box;
+    pointer-events: none;
+    cursor: text;
+
+    position: absolute;
+    top: -4px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+  }
+
+  .field__label_wrap::after {
+    content: "";
+    box-sizing: border-box;
+    width: 100%;
+    height: 0;
+    opacity: 0;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    border-bottom: var(--uiFieldBorderWidth) solid var(--uiFieldBorderColorActive);
+    transform: translate3d(-105%, 0, 0);
+    will-change: transform, opacity;
+    transition: transform 0.285s ease-out 0.2s, opacity 0.2s ease-out 0.2s;
+  }
+
+  .color__input {
+    width: 100%;
+    height: 50px;
+    --uiFieldPlaceholderColor: var(--border-color);
+
+    background-color: transparent;
+    border: none;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    font-family: inherit;
+    font-size: inherit;
+  }
+
+  .color__input:focus::-webkit-input-placeholder {
+    color: var(--border-color);
+  }
+
+  .color__input:focus::-moz-placeholder {
+    color: var(--border-color);
+  }
+
+  .color__label_wrap {
+    box-sizing: border-box;
+    pointer-events: none;
+    cursor: text;
+
+    position: absolute;
+    top: 16px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+  }
+
+  .field {
+    width: 100%;
+
+    --uiFieldBorderColorActive: var(--fieldBorderColorActive, rgba(22, 22, 22, 1));
+
+    display: var(--fieldDisplay, inline-flex);
+    position: relative;
+    font-size: var(--fieldFontSize, 1rem);
+
+    --fieldBorderColor: var(--border-color);
+    --fieldBorderColorActive: var(--border-color);
+
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      // opacity:1;
+      // background: var(--background-color) url("data:image/svg+xml;utf8,<svg xmlns='img/down-arrow.svg' width='10' height='10'></svg>") no-repeat center center;
+      background: url("img/number-light-s.png") no-repeat center center;
+      background-size: 80%;
+      width: 1rem;
+      height: 2rem;
+    }
+  }
+
+  .widefield {
+    --uiFieldBorderColorActive: var(--fieldBorderColorActive, rgba(22, 22, 22, 1));
+
+    --fieldBorderColor: var(--border-color);
+    --fieldBorderColorActive: var(--border-color);
+    input[type="number"] {
+      padding-right: 4rem;
+    }
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      position: absolute;
+      // background: var(--background-color) url("data:image/svg+xml;utf8,<svg xmlns='img/down-arrow.svg' width='10' height='10'></svg>") no-repeat center center;
+      background: url("img/number-light.png") no-repeat center center;
+      background-size: contain;
+      transform: rotate(90deg);
+      cursor: pointer;
+      right: 2rem;
+      top: 0rem;
+      width: 1.2rem;
+      height: 3rem;
+    }
+  }
+
+  .field__label {
+    position: absolute;
+    color: var(--text-color);
+    left: var(--uiFieldPaddingLeft);
+    top: 0;
+
+    line-height: 1;
+    font-size: var(--fieldHintFontSize, inherit);
+
+    transition: top 0.2s cubic-bezier(0.9, -0.15, 0.1, 1.15), opacity 0.2s ease-out, font-size 0.2s ease-out;
+    will-change: bottom, opacity, font-size;
+  }
+
+  .field__input:focus ~ .field__label_wrap .field__label,
+  .field__input:not(:placeholder-shown) ~ .field__label_wrap .field__label {
+    --fieldHintFontSize: var(--fieldHintFontSizeFocused, 0.75rem);
+
+    top: var(--fieldHintTopHover, 0.25rem);
+  }
+
+  $toggle-indicator-size: 24px; // changing this number will resize the whole toggle
+  $track-height: $toggle-indicator-size + 6;
+  $track-width: $toggle-indicator-size * 2.5;
+  $highContrastModeSupport: solid 2px transparent;
+  /* 
+
+  The following vars come from my theme. 
+  You'll need to replace with your own color values. 
+
+  - "$light"
+  - "$mid"
+  - "$dark"
+
+  */
+  $track-border: var(--border-color);
+  $track-background: var(--background-color);
+  $focus-ring: 0px 0px 0px 2px var(--text-color);
+  $speed: 0.2s;
+
+  // Toggle specific styles
+  .toggle {
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 100px;
+    display: flex;
+    padding: 0 var(--uiFieldPaddingRight) 0 var(--uiFieldPaddingRight);
+    margin-right: 0%;
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+
+  // Since we can't style the checkbox directly, we "hide" it so we can draw the toggle.
+  .toggle__input {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+
+    // This style sets the focus ring. The ":not([disabled])" prevents the focus ring from creating a flash when the element is clicked.
+    &:not([disabled]):active + .toggle_track,
+    &:not([disabled]):focus + .toggle_track {
+      border: 1px solid transparent;
+      box-shadow: $focus-ring;
+    }
+
+    &:disabled + .toggle_track {
+      cursor: not-allowed;
+      opacity: 0.7;
+    }
+  }
+
+  .toggle_track {
+    background: var(--background-color);
+    border: 1px solid $track-border;
+    border-radius: 100px;
+    cursor: pointer;
+    display: flex;
+    height: $track-height;
+    margin-right: 12px;
+    position: relative;
+    width: $track-width;
+  }
+
+  .toggle_indicator {
+    align-items: center;
+    background: #c4c4c4;
+    border-radius: $toggle-indicator-size;
+    bottom: 2px;
+    display: flex;
+    height: $toggle-indicator-size;
+    justify-content: center;
+    left: 2px;
+    outline: $highContrastModeSupport;
+    position: absolute;
+    transition: $speed;
+    width: $toggle-indicator-size;
+  }
+
+  // The check mark is optional
+  .checkMark {
+    fill: var(--text-color);
+    height: $toggle-indicator-size - 4;
+    width: $toggle-indicator-size - 4;
+    opacity: 0;
+    transition: opacity $speed ease-in-out;
+  }
+
+  .toggle__input:checked + .toggle_track .toggle_indicator {
+    background: var(--bavkground-color);
+    transform: translateX($track-width - $track-height);
+
+    .checkMark {
+      opacity: 1;
+      transition: opacity $speed ease-in-out;
+    }
+  }
+
+  .range__input {
+    margin-left: var(--uiFieldPaddingLeft);
+    -webkit-appearance: none;
+    width: 50%;
+    height: 2px;
+    background: var(--border-color);
+    outline: none;
+    border: 1px var(--border-color) solid;
+    border-radius: 8px;
+  }
+
+  /* for chrome/safari */
+  .range__input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background: var(--text-color);
+    cursor: pointer;
+    border: 1px var(--border-color) solid;
+    border-radius: 100%;
+  }
+
+  /* for firefox */
+  .range__input::-moz-range-thumb {
+    width: 20px;
+    height: 60px;
+    background: var(--background-color);
+    cursor: pointer;
+    border: 1px var(--border-color) solid;
+    border-radius: 4px;
+  }
+  .range__label {
+    font-weight: bold;
+    margin-left: var(--uiFieldPaddingLeft);
+  }
+}
+
+.datetimePicker {
+  //max-width: 246px;
+  width: 100%;
+  margin: 1rem auto 2rem auto;
+
+  :global {
+    span.e-input-group,
+    span.e-input-group:hover:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled):not(.e-float-icon-left),
+    span.e-input-group.e-control-wrapper:hover:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled):not(.e-float-icon-left),
+    span.e-float-input.e-control-wrapper:hover:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled):not(.e-float-icon-left),
+    span.e-float-input:hover:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled):not(.e-float-icon-left),
+    span.e-input-group.e-float-icon-left:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled)
+      .e-input-in-wrap:hover,
+    span.e-input-group.e-control-wrapper.e-float-icon-left:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled)
+      .e-input-in-wrap:hover,
+    span.e-float-input.e-float-icon-left:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled)
+      .e-input-in-wrap:hover,
+    span.e-float-input.e-control-wrapper.e-float-icon-left:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled)
+      .e-input-in-wrap:hover,
+    span.e-float-input:hover:not(.e-input-group):not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled)
+      input:not([disabled]),
+    span.e-float-input:hover:not(.e-input-group):not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled)
+      textarea:not([disabled]),
+    span.e-float-input.e-control-wrapper:hover:not(.e-input-group):not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled)
+      input:not([disabled]),
+    span.e-float-input.e-control-wrapper:hover:not(.e-input-group):not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled)
+      textarea:not([disabled]),
+    span.e-float-input.e-control-wrapper.e-float-icon-left:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled)
+      .e-input-in-wrap:hover,
+    span.e-input-group:not(.e-success):not(.e-warning):not(.e-error):not(.e-float-icon-left),
+    span.e-input-group.e-float-icon-left:not(.e-success):not(.e-warning):not(.e-error) .e-input-in-wrap,
+    span.e-input-group.e-control-wrapper:not(.e-success):not(.e-warning):not(.e-error):not(.e-float-icon-left),
+    span.e-input-group.e-control-wrapper.e-float-icon-left:not(.e-success):not(.e-warning):not(.e-error)
+      .e-input-in-wrap,
+    span.e-float-input.e-float-icon-left:not(.e-success):not(.e-warning):not(.e-error) .e-input-in-wrap,
+    span.e-float-input.e-control-wrapper.e-float-icon-left:not(.e-success):not(.e-warning):not(.e-error)
+      .e-input-in-wrap {
+      input {
+        padding: 1px 2px 1px 16px;
+      }
+      textarea::selection,
+      input::selection {
+        background-color: var(--dropdown-color);
+      }
+      border-color: var(--border-color);
+      border-bottom-width: var(--uiFieldBorderWidth, 2px);
+    }
+
+    span.e-input.e-error,
+    span.e-input.e-error:focus,
+    span.e-input-group.e-error input.e-input,
+    span.e-input-group.e-control-wrapper.e-error input.e-input,
+    span.e-input-group.e-control-wrapper.e-error .e-input-group-icon,
+    span.e-input-group.e-error .e-input-group-icon,
+    span.e-input-group.e-error textarea.e-input,
+    span.e-input-group.e-control-wrapper.e-error textarea.e-input {
+      padding: 1px 2px 1px 16px;
+      &::selection {
+        background-color: var(--dropdown-color);
+      }
+    }
+
+    .e-input-group:not(.e-float-icon-left):not(.e-float-input)::before,
+    .e-input-group:not(.e-float-icon-left):not(.e-float-input)::after,
+    .e-input-group.e-float-icon-left:not(.e-float-input) .e-input-in-wrap::before,
+    .e-input-group.e-float-icon-left:not(.e-float-input) .e-input-in-wrap::after,
+    .e-input-group.e-control-wrapper:not(.e-float-icon-left):not(.e-float-input)::before,
+    .e-input-group.e-control-wrapper:not(.e-float-icon-left):not(.e-float-input)::after,
+    .e-input-group.e-control-wrapper.e-float-icon-left:not(.e-float-input) .e-input-in-wrap::before,
+    .e-input-group.e-control-wrapper.e-float-icon-left:not(.e-float-input) .e-input-in-wrap::after {
+      background: var(--border-color);
+    }
+    .e-input-group:not(.e-disabled):not(.e-float-icon-left),
+    .e-input-group.e-float-icon-left:not(.e-disabled) .e-input-in-wrap,
+    .e-input-group.e-control-wrapper:not(.e-disabled):not(.e-float-icon-left),
+    .e-input-group.e-control-wrapper.e-float-icon-left:not(.e-disabled) .e-input-in-wrap {
+      &.e-input-focus {
+        &::before,
+        &::after {
+          width: 100%;
+        }
+      }
+      &::before,
+      &::after {
+        left: 0;
+        height: 1px;
+        border: none;
+      }
+    }
+    .e-input-group-icon.e-date-icon::before,
+    *.e-control-wrapper .e-input-group-icon.e-date-icon::before,
+    .e-datetime-wrapper .e-time-icon.e-icons::before {
+      color: var(--text-color);
+    }
+    .e-input-group input.e-input,
+    .e-input-group.e-control-wrapper input.e-input,
+    .e-float-input input,
+    .e-float-input.e-control-wrapper input,
+    .e-input-group textarea.e-input,
+    .e-input-group.e-control-wrapper textarea.e-input,
+    .e-float-input textarea,
+    .e-float-input.e-control-wrapper textarea,
+    .e-input-group .e-input[disabled],
+    .e-input-group.e-control-wrapper .e-input[disabled],
+    .e-input-group.e-disabled input.e-input,
+    .e-input-group.e-control-wrapper.e-disabled input.e-input,
+    .e-input-group.e-disabled textarea.e-input,
+    .e-input-group.e-control-wrapper.e-disabled textarea.e-input {
+      color: var(--text-color);
+      font-family: "Raleway", "STHeiti Light";
+    }
+    .e-float-input .e-clear-icon,
+    .e-float-input.e-control-wrapper .e-clear-icon,
+    .e-input-group .e-clear-icon,
+    .e-input-group.e-control-wrapper .e-clear-icon {
+      display: none;
+    }
+    .e-input-group.e-error,
+    .e-input-group.e-control-wrapper.e-error,
+    .e-input-group.e-error:not(.e-float-icon-left),
+    .e-input-group.e-control-wrapper.e-error:not(.e-float-icon-left) {
+      border-bottom-color: var(--border-color);
+    }
+
+    .e-input-group:not(.e-float-icon-left).e-error:not(.e-float-input)::before,
+    .e-input-group:not(.e-float-icon-left).e-error:not(.e-float-input)::after,
+    .e-input-group.e-float-icon-left.e-error:not(.e-float-input) .e-input-in-wrap::before,
+    .e-input-group.e-float-icon-left.e-error:not(.e-float-input) .e-input-in-wrap::after,
+    .e-input-group.e-control-wrapper:not(.e-float-icon-left).e-error:not(.e-float-input)::before,
+    .e-input-group.e-control-wrapper:not(.e-float-icon-left).e-error:not(.e-float-input)::after,
+    .e-input-group.e-control-wrapper.e-float-icon-left.e-error:not(.e-float-input) .e-input-in-wrap::before,
+    .e-input-group.e-control-wrapper.e-float-icon-left.e-error:not(.e-float-input) .e-input-in-wrap::after {
+      background: var(--text-color);
+    }
+  }
+}
+
+:global {
+  div.e-datetimepicker.e-popup .e-list-parent.e-ul {
+    background-color: var(--background-color);
+    li.e-list-item {
+      color: var(--text-color);
+      transition: 100ms;
+    }
+    li.e-list-item:hover {
+      color: var(--text-color);
+      padding-left: 0.5rem;
+      background-color: var(--background-color);
+    }
+    li.e-list-item.e-active,
+    li.e-list-item.e-active:hover {
+      background-color: var(--dropdown-color);
+      color: var(--text-color);
+    }
+  }
+  div.e-datepicker {
+    .e-calendar .e-footer-container,
+    div.e-bigger.e-small .e-calendar .e-footer-container,
+    .e-calendar,
+    div.e-bigger.e-small .e-datepicker .e-calendar {
+      background-color: var(--background-color);
+      .e-header .e-title {
+        color: var(--text-color);
+      }
+      .e-content span.e-day {
+        border: 1px solid var(--background-color);
+      }
+
+      // selected date
+      .e-content td.e-selected span.e-day,
+      .e-content td.e-today.e-selected:hover span.e-day,
+      .e-content td.e-selected:hover span.e-day,
+      .e-content td.e-selected.e-focused-date span.e-day {
+        background: var(--dropdown-color);
+        border: 1px solid var(--dropdown-color);
+        color: var(--text-color);
+      }
+      // today date
+      .e-content td.e-today span.e-day,
+      .e-content td.e-focused-date.e-today span.e-day {
+        border: 1px solid var(--text-color);
+        color: var(--text-color);
+      }
+
+      // hover date
+      .e-content td.e-focused-date span.e-day,
+      .e-content td.e-focused-date:hover span.e-day,
+      .e-content td.e-focused-date:focus span.e-day,
+      .e-content td.e-focused-date span.e-day,
+      .e-content td.e-focused-date:hover span.e-day,
+      .e-content td.e-focused-date:focus span.e-day,
+      .e-content.e-month td:hover span.e-day {
+        border: 1px solid var(--dropdown-color);
+        background: var(--background-color);
+        color: var(--text-color);
+      }
+    }
+    button.e-btn.e-flat.e-primary,
+    button.e-css.e-btn.e-flat.e-primary {
+      color: var(--dropdown-color);
+    }
+    .e-calendar .e-header .e-prev:hover > span,
+    .e-calendar .e-header .e-next:hover > span,
+    .e-bigger.e-small .e-calendar .e-header .e-prev:hover > span,
+    .e-bigger.e-small .e-calendar .e-header .e-next:hover > span,
+    button.e-btn.e-flat.e-primary:hover,
+    button.e-css.e-btn.e-flat.e-primary:hover {
+      color: var(--text-color);
+      background-color: transparent;
+    }
+    div.e-model-header {
+      background-color: var(--dropdown-color);
+    }
+    div.e-calendar .e-date-icon-prev,
+    div.e-calendar .e-date-icon-next,
+    div.e-bigger.e-small .e-calendar .e-date-icon-prev,
+    div.e-bigger.e-small .e-calendar .e-date-icon-next,
+    div.e-calendar .e-header .e-title,
+    .e-bigger.e-small .e-calendar .e-header .e-title,
+    div.e-calendar th,
+    .e-bigger.e-small .e-calendar th,
+    div.e-calendar .e-content span,
+    .e-bigger.e-small .e-calendar .e-content span {
+      color: var(--text-color);
+    }
+  }
+}

@@ -1,0 +1,203 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+
+.container {
+  @include resetButton();
+
+
+
+  &.fit {
+    display: contents;
+  }
+
+  &.disabled,
+  &:disabled {
+    pointer-events: none;
+    cursor: unset;
+    opacity: 0.2;
+  }
+}
+
+.collector {
+  transition: color #{$theme-duration} ease-out;
+  color: var(--text-color);
+  margin: 3px 14px;
+  opacity: 0.5;
+  border-bottom: 1px solid transparent;
+  
+  &.selected {
+    opacity:1;
+  }
+  
+  @include hover {
+    &:not(.selected) {
+      opacity:1;
+      border-bottom: 1px solid var(--text-color);
+    }
+  }
+}
+
+
+.plainText {
+  color: var(--text-color);
+  transition: color #{$theme-duration} ease-out;
+  padding-right: 0px;
+
+
+  &.selected {
+    font-weight: bold;
+  }
+
+  @include hover {
+    &:not(.selected) {
+      //text-decoration: underline;
+    }
+  }
+}
+
+.primary {
+  color: var(--text-color);
+  transition: color #{$theme-duration} ease-out;
+  /*
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  */
+  &.selected {
+    font-weight: bold;
+  }
+
+  @include hover {
+    &:not(.selected) {
+      text-decoration: underline;
+    }
+  }
+}
+
+.selectPrize {
+
+  position: relative;
+  display: inline-block;
+  padding: 1rem;
+  margin: 0 0 1em;
+  width: 100%;
+  justify-content: space-between;
+  border: 1px dashed var(--border-color);
+  border-radius: 0.5rem;
+  color:　var(--text-color);
+
+  .label {
+    background-color: blue;
+    display: flex;
+    height: 50px;
+    padding: 0px 20px 0px 20px;
+    line-height: 50px;
+    color: var(--text-color);
+    align-items: center;
+    justify-content: space-between;
+
+    transition: background-color #{$theme-duration} ease-out,
+      color #{$theme-duration} ease-out;
+
+    .icon{
+      margin-right: 10px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    .input {
+      height: 25px;
+      line-height: 25%;
+      width: 60px;
+    }
+  }
+
+  &.selected {
+    border: 2px solid var(--border-color);
+  }
+
+  @include hover {
+    &:not(.selected) {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+
+
+    
+
+
+.tab {
+  color: var(--text-color);
+  transition: color #{$theme-duration} ease-out;
+  transition: #{$theme-duration};
+  padding: 0px 5px 10px;
+  text-align: center;
+
+  &.selected {
+    transition: 0s;
+    font-weight: bold;
+    border-bottom: 2px solid;
+  }
+
+  @include hover {
+    &:not(.selected) {
+      transform: scale(1.1);
+      text-decoration: none;
+    }
+  }
+}
+
+.secondary {
+  color: var(--text-color);
+  transition: color #{$theme-duration} ease-out;
+
+  @include hover {
+    text-decoration: none;
+  }
+}
+
+.purchase {
+  padding: 0.5rem 1rem;
+  color: var(--text-color);
+  background-color:transparent;
+  border: 1px var(--text-color) solid;
+  border-radius: 0.5rem;
+  transition: border-color #{$theme-duration} ease-out,
+    color #{$theme-duration} ease-out;
+  
+}
+
+.curate {
+
+
+  opacity: inherit;
+  margin: 0 auto;
+  margin-top: 50px;
+  cursor: pointer;
+  padding: 12px 6px;
+  width: 25%;
+  min-width: 200px;
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+  border-radius: 10px;
+  transition: border-color #{$theme-duration} ease-out,
+    color #{$theme-duration} ease-out;
+}
+
+.swapBtn {
+  opacity: inherit;
+  margin-top: 10px;
+  cursor: pointer;
+
+  padding: 6px 6px;
+  width: 150px;
+  color: var(--text-color);
+  ; // this colour doesnt change
+  background-color: transparent;
+  border: 1px solid var(--text-color);
+  border-radius: 34px;
+  transition: border-color #{$theme-duration} ease-out,
+    color #{$theme-duration} ease-out;
+}

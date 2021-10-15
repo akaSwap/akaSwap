@@ -1,0 +1,225 @@
+@import '../../styles/layout.scss';
+@import '../../styles/variables.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  .owner {
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    padding: 0.5rem 0;
+    justify-content: space-between;
+    @media screen and (max-width:600px){
+      flex-direction: column;
+      align-items: normal;
+    }
+    border-bottom: 1px solid var(--border-color);
+
+    .address{
+      display: flex;
+    }
+
+    .buttons {
+      
+      
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      
+      @include respond-from('phone'){
+        >button>div{
+          padding: 0.5rem 0;
+        }
+        margin: 0 -5px;
+      }
+
+      & > * {
+        margin-left: 5px;
+        @media screen and (max-width:600px){
+          margin: 5px;
+          width:100%;
+        }
+      }
+
+      .popupView{
+      }
+      .Modal {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        right: 40px;
+        bottom: 40px;
+        text-align: center;
+      }
+    }
+
+    
+  }
+  .swap {
+    flex-wrap:wrap;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    @media screen and (max-width:600px){
+      align-items: normal;
+    }
+
+    .buttons {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      @media (max-width:600px){
+        flex-basis: 100%;
+      }
+
+      & > * {
+        margin-left: 5px;
+        @media screen and (max-width:600px){
+          margin: 5px;
+          width:100%;
+        }
+      }
+    }
+
+    .break{
+      height: 0;
+      @media screen and (max-width:600px){
+        flex-basis: 100%;
+      }
+    }
+
+    .price{
+      margin-left: auto;
+      @media screen and (min-width:600px){
+          margin-right: 1rem ;
+        }
+    }
+  }
+  .view {
+    flex-wrap:wrap;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    @media screen and (max-width:600px){
+      align-items: normal;
+    }
+
+    .buttons {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      @media (max-width:600px){
+        flex-basis: 100%;
+      }
+
+      & > * {
+        margin-left: 5px;
+        @media screen and (max-width:600px){
+          margin: 5px;
+          width:100%;
+        }
+      }
+    }
+
+    .break{
+      height: 0;
+      @media screen and (max-width:600px){
+        flex-basis: 100%;
+      }
+    }
+
+    .price{
+      margin-left: auto;
+      @media screen and (min-width:600px){
+          margin-right: 1rem ;
+        }
+    }
+
+    .donePrice{
+      color: var(--border-color);
+      margin-left: auto;
+      @media screen and (min-width:600px){
+          margin-right: 1rem ;
+        }
+    }
+  }
+}
+.modalOverlay{
+  position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--border-color);
+    z-index: 1000;
+    display: flex;
+    padding: 1rem;
+    /*max-height: 100vh;
+    overflow-y: scroll;*/
+}
+.modal{
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  width : 100%; 
+  max-width:700px;
+  padding: 1rem 0;
+  transform: translate(-50% -50%); 
+  border-radius: 1rem;
+  >div{
+    padding: 0 auto;
+    width: 100%!important;
+    overflow-y: scroll;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  >button{
+    align-self: flex-end;
+    margin: -1rem 0;
+    padding: 1rem;
+    color: var(--text-color);
+  }
+}
+
+
+
+.modalOverlay div.auctionModal{
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  width : 100%; 
+  max-width: 750px;
+  padding: 1rem 0;
+  transform: translate(-50% -50%); 
+  border-radius: 1rem;
+  >div{
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: scroll;
+    width: 100%;
+  }
+  >button{
+    align-self: flex-end;
+    margin: -1rem 0;
+    padding: 1rem;
+    color: var(--text-color);
+  }
+}
+
+.terminated {
+  color: var(--border-color);
+}

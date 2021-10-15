@@ -1,0 +1,87 @@
+@import "../../styles/layout.scss";
+@import "../../styles/variables.scss";
+
+.selectcontainer,
+.container {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 0 0 1em;
+    width: 100%;
+    justify-content: space-between;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    .media img {
+        max-height: 300px;
+    }
+
+    .label {
+        //position: absolute;
+        flex-wrap: wrap;
+        display: flex;
+        //bottom: 6px;
+        //right: 6px;
+        height: 50px;
+        padding: 0.5rem 0px 0px 0px;
+        color: var(--text-color);
+        align-items: center;
+        justify-content: space-between;
+        margin-top: auto;
+
+        transition: background-color #{$theme-duration} ease-out, color #{$theme-duration} ease-out;
+
+        span {
+            min-width: fit-content;
+            display: inline-block;
+        }
+        .icon {
+            margin-right: 10px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        > .amount {
+            margin-left: auto;
+            display: flex;
+            align-items: baseline;
+            > div {
+                width: auto;
+            }
+            > div > label,
+            input {
+                width: auto;
+            }
+        }
+        .amount input {
+            height: 35px;
+            line-height: 25%;
+            width: 60px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            --uiFieldPaddingLeft: 0.5rem;
+        }
+    }
+}
+.selectcontainer {
+    border: 1px dashed var(--border-color);
+}
+.chosen {
+    border: 2px solid var(--text-color);
+}
+
+.list {
+    display: grid;
+    margin-top: 3rem;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    align-items: top;
+    column-gap: 1em;
+    row-gap: 1em;
+
+    @include respond-to("tablet") {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @include respond-to("desktop") {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}

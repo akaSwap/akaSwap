@@ -1,0 +1,65 @@
+@import '../../../styles/layout.scss';
+@import '../../../styles/variables.scss';
+
+.fullscreen{
+    
+
+}
+.container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  .viewer{
+      width:100%;
+      overflow: scroll;
+      padding: 0px;
+    }
+  &.halfscreen{
+    .viewer>div>div>div{
+      max-height: 460px!important;
+    }
+  }
+  &.fullscreen{
+    .viewer>div>div>div{
+        max-height: 100%;
+    }
+  }
+  
+  
+
+  .navibar{
+    align-items: center;
+    background-color: var(--border-color);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+
+    .button{
+      padding: 0px 2px;
+    }
+    .textbox{
+      padding: 0px 2px;
+      max-width: 100px;
+    }
+    
+  }
+
+  // &:after {
+  //   content: '';
+  //   display: block;
+  //   padding-bottom: 100%;
+  // }
+
+  // iframe {
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 50%;
+  //   width: 100%;
+  //   height: 100%;
+  //   transform: translateX(-50%) translateY(-50%);
+  //   border: none;
+  // }
+}
+

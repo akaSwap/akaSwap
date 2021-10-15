@@ -1,0 +1,43 @@
+@import '../../styles/variables.scss';
+@import '../../styles/layout.scss';
+
+.container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--background-color);
+  border-top: var(--border-color) 1px solid;
+  color: var(--text-color);
+  transition: background-color #{$theme-duration} ease-out,
+    color #{$theme-duration} ease-out;
+  padding: $mobile-padding;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
+
+  .content{
+    text-align: center;
+    .link{
+      margin-left: 0.5rem;
+      margin-bottom: 0.7rem;
+      font-size: 0.3rem;
+      padding: 0.2rem 0.4rem;
+      border: 1px solid var(--text-color);
+      border-radius: 2px;
+      opacity: 0.5;
+      width: 60px;
+      color: var(--text-color);
+    }
+    .license{
+      opacity: 0.7;
+      color: var(--text-color);
+    }
+    .link:hover{
+      opacity: 1.0;
+    }
+  }
+
+  
+}

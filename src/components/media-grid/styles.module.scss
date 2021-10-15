@@ -1,0 +1,130 @@
+@import '../../styles/variables.scss';
+@import '../../styles/layout.scss';
+.wrapButton{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+.mediaItemBtn{
+  position: relative;
+}
+.list {
+  //column-count: 2;
+  //column-gap: 20px;
+  // display: grid;
+  // grid-template-columns: auto auto;
+  // grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); 
+  //grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  display: flex;
+  margin: 0 -20px;
+  // flex-wrap: wrap;
+
+  // grid-column-gap: 10px;
+  // grid-row-gap: 10px;
+  // grid-template-columns: repeat(1, minmax(0, 1fr));
+
+  // @include respond-to('tablet') {
+  //   grid-template-columns: repeat(2, minmax(0, 1fr));
+  // }
+
+  // @include respond-to('desktop') {
+  //   grid-template-columns: repeat(3, minmax(0, 1fr));
+  // }
+
+
+  .column{
+    margin: 0 20px;
+  }
+
+  .item {
+    position: relative;
+    // padding-top: 20px;
+    margin: 0;
+    display: grid;
+    // grid-template-rows: 1fr 5px;
+    margin-bottom: 0px;
+    break-inside: avoid;
+    margin-top: 1rem;
+
+    padding: 0px;
+    -moz-box-shadow:6px 6px 15px 0px rgba(10%,10%,10%,0.8);
+    -webkit-box-shadow:6px 6px 15px 0px rgba(10%,10%,10%,0.8);
+    box-shadow:6px 6px 30px 0px rgba(0%,0%,0%,0.5);
+
+
+    .media{
+
+      position: relative;
+      
+
+      .rollover{
+        position:absolute;
+        bottom: 2.5rem;
+        right: 0rem;
+      }
+
+      video,img{
+        width:100%;
+        max-height: 100%;
+        max-height: 680px;
+        object-fit: contain;
+        max-width: 100%;
+      }
+      .auctionInfo{
+        width: 100%;
+        padding: 0.3rem 0.5rem;
+        font-size: 1.3rem;
+        background-color: var(--background-color);
+        text-shadow: var(--background-color) 0.1em 0.1em 0.1em;
+        .id{
+          position: absolute;
+          top: 1rem;
+          left: 1.5rem;
+        }
+        .countdown{
+          position: absolute;
+          top: 1rem;
+          right: 1.5rem;
+          @include respond-from("tablet"){
+            font-size: 1.0rem;
+          }
+        }
+        
+      }
+
+      .cover{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        align-items: center;
+        font-size: 2rem;
+        background-color: var(--border-color);
+        color:var(--text-color);
+      }
+      
+    }
+    .bottomInfo{
+      padding: 0.5rem;
+      a{z-index: 2;}
+    }
+    
+  }
+}
+
+
+:global(.light){
+  .list{
+    .item{
+      -moz-box-shadow:6px 6px 15px 0px rgba(20%,20%,20%,0.3);
+      -webkit-box-shadow:6px 6px 15px 0px rgba(20%,20%,20%,0.3);
+      box-shadow:6px 6px 15px 0px rgba(20%,20%,20%,0.3);
+    }
+  }
+}

@@ -1,0 +1,173 @@
+let LANGUAGE = {}
+export const setLanguage = (data) => (LANGUAGE = data)
+export const getLanguage = () => LANGUAGE
+
+// let NEWS = {}
+// export const setNews = (data) => (NEWS = data)
+// export const getNews = () => NEWS
+
+let NOTIFICATIONS = {}
+export const setNotifications = (data) => (NOTIFICATIONS = data)
+export const getNotifications = () => NOTIFICATIONS
+
+let CURATION_LIST = {}
+export const setCurationList = (data) => (CURATION_LIST = data)
+export const getCurationList = () => CURATION_LIST
+
+let ABOUT = {}
+export const setAbout = (data) => (ABOUT = data)
+export const getAbout = () => ABOUT
+
+let akaObjBlockList = []
+export const setAkaObjBlockList = (data) => (akaObjBlockList = data)
+export const getAkaObjBlockList = () => akaObjBlockList
+
+let walletBlockList = []
+export const setWalletBlockList = (data) => (walletBlockList = data)
+export const getWalletBlockList = () => walletBlockList
+
+let banBlockList = []
+export const setBanBlockList = (data) => (banBlockList = data)
+export const getBanBlockList = () => banBlockList
+
+let gachaWhiteList = []
+export const setGachaWhiteList = (data) => (gachaWhiteList = data)
+export const getGachaWhiteList = () => gachaWhiteList
+
+let gachaClosedList = []
+export const setGachaClosedList = (data) => (gachaClosedList = data)
+export const getGachaClosedList = () => gachaClosedList
+
+
+export const PATH = {
+  FEED: '/latest',
+  ISSUER: '/tz',
+  ABOUT: '/about',
+  SYNC: '/sync',
+  MINT: '/mint',
+  AKAOBJ: '/akaobj',
+  AUCTION: '/auction',
+  TAGS: '/tags',
+  GACHA: '/gacha',
+  BUNDLE: '/bundle'
+}
+
+export const ROUTES = {
+  FEED: { exact: true, path: '/latest', component: null },
+  ISSUER: { exact: false, path: '/tz/:id', component: null },
+  ABOUT: { exact: false, path: '/about', component: null },
+  SYNC: { exact: false, path: '/sync', component: null },
+  MINT: { exact: false, path: '/mint', component: null },
+  AKAOBJ: { exact: false, path: '/akaobj/:id', component: null },
+}
+
+export const MINT_MIN_LIMIT = 1
+export const MINT_MAX_LIMIT = 10000
+export const MINT_FILESIZE = 100
+export const TITLE_LIMIT = 100
+export const DESCRIPTION_LIMIT = 5000
+export const ROYALTIES_SHARER_LIMIT = 3
+export const SWAP_SHARER_LIMIT = 4
+
+export const VOTE_FEE = 1000
+
+export const AUCTION_RAISE_RANGE = [5, 10, 20]
+export const AUCTION_EXPIRATION_SECOND = 86400 * 7
+export const MAX_AUCTION_PURCHASE_PRICE = 1e10
+
+export const BUNDLE_ITEM_LIMIT = 10
+
+export const CURRENT_GACHA_STAGE = 3
+export const GACHA_ITEM_LIMIT = 20
+export const GACHA_FEE_AKADAO = 10000
+export const GACHA_EXPIRATION_SECOND = 86400 * 7
+export const GACHA_ISSUE_DAY_LIMIT = 30
+export const GACHA_DURATION_LIMIT = 14
+
+// this one is uAkaDAO
+export const MIN_SWAP_PRICE = 1000
+
+export const MIMETYPE = {
+  BMP: 'image/bmp',
+  GIF: 'image/gif',
+  JPEG: 'image/jpeg',
+  PNG: 'image/png',
+  SVG: 'image/svg+xml',
+  // TIFF: 'image/tiff',
+  WEBP: 'image/webp',
+  MP4: 'video/mp4',
+  OGV: 'video/ogg',
+  QUICKTIME: 'video/quicktime',
+  WEBM: 'video/webm',
+  GLB: 'model/gltf-binary',
+  GLTF: 'model/gltf+json',
+  MP3: 'audio/mpeg',
+  OGA: 'audio/ogg',
+  PDF: 'application/pdf',
+  ZIP: 'application/zip',
+  ZIP1: 'application/x-zip-compressed',
+  ZIP2: 'multipart/x-zip',
+}
+
+export const IPFS_DIRECTORY_MIMETYPE = 'application/x-directory'
+
+export const ALLOWED_MIMETYPES = Object.keys(MIMETYPE)
+  .map((k) => MIMETYPE[k])
+// .filter((e) => e !== MIMETYPE.GLTF) // disabling GLTF from new updates
+
+export const ALLOWED_FILETYPES = Object.keys(MIMETYPE)
+
+export const ALLOWED_FILETYPES_LABEL = ALLOWED_FILETYPES.filter(
+  (k) => k !== 'ZIP1'
+)
+  .filter((k) => k !== 'ZIP2')
+  .map((k) => (k === 'ZIP' ? 'HTML (ZIP ARCHIVE)' : k))
+  .join(', ')
+
+export const ALLOWED_COVER_MIMETYPES = [
+  MIMETYPE.JPEG,
+  MIMETYPE.PNG,
+  MIMETYPE.GIF,
+]
+
+export const ALLOWED_COVER_FILETYPES_LABEL = ['jpeg, png, gif']
+
+export const IPFS_DISPLAY_URI_BLACKCIRCLE =
+  'ipfs://QmNrhZHUaEqxhyLfqoq1mtHSipkWHeT31LNHb1QEbDHgnc'
+
+
+export const webUrl = 'example.com'
+
+export const MY_GATEWAY = `https://${webUrl}/ipfs/`
+export const CLOUDFLARE_GATEWAY = 'https://cloudflare-ipfs.com/ipfs/'
+export const INFURA_GATEWAY = 'https://infura-ipfs.io/ipfs/'
+export const DWEB_GATEWAY = 'https://dweb.link/ipfs/'
+export const PINATA_GATEWAY = 'https://gateway.pinata.cloud/ipfs/'
+export const MY_PINATA_GATEWAY = 'https://akaswap.mypinata.cloud/ipfs/'
+export const DEFAULT_IPFS_GATEWAY = MY_GATEWAY
+export const USE_DEFAULT_IPFS_GATEWAY = true
+
+
+export const nodeUrl = 'https://example.com/tezos'
+
+export const networkType = 'custom'
+
+// ENV = dev / test / main
+export const ENV = 'dev'
+export const VERSION = 'v1.3'
+
+export const testListAddr = 'Contract address'
+export const dasabeeAddr = 'Contract address'
+export const ManagerAddr = ['wallet', 'wallet']
+export const OracleAddr = 'wallet'
+export const voteAddr = 'Contract address'
+
+export const auctionAddr = 'Contract address'
+export const bundleAddr = 'Contract address'
+export const gachaAddr = 'Contract address'
+export const marketAddr = 'Contract address'
+export const auctionFundAddr = 'Contract address'
+export const minterAddr = 'Contract address'
+export const DAOAdminAddr = 'Contract address'
+export const DAOTokenAddr = 'Contract address'
+export const nftContractAddr = 'Contract address'

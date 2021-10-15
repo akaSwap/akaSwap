@@ -1,0 +1,260 @@
+@import "../../styles/layout.scss";
+
+.carouselSmallWrapper {
+    width: 100%;
+    height: 80vw;
+
+    .slide {
+        --h: 80vw;
+        width: 80vw;
+        height: var(--h);
+        position: relative;
+        display: flex;
+
+        @include respond-to("tablet") {
+            width: 40vw;
+            --h: 40vw;
+        }
+
+        @include respond-to("desktop") {
+            width: 15vw;
+            --h: 15vw;
+        }
+
+        .lastImage {
+            display: flex;
+            position: relative;
+            align-self: center;
+            width: 100%;
+            height: auto;
+
+            .image {
+                max-height: var(--h);
+                position: static;
+            }
+        }
+
+        img {
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            margin: auto;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .last {
+            position: absolute;
+            top: 0rem;
+            left: 1rem;
+            width: 2.2rem;
+            height: 2.2rem;
+            z-index: 3000;
+        }
+    }
+    @include respond-to("tablet") {
+        width: 100%;
+        height: 40vw;
+    }
+
+    @include respond-to("desktop") {
+        width: 100%;
+        height: 15vw;
+    }
+}
+
+.carouselWrapper {
+    width: 80vw;
+    height: 80vw;
+    margin: 0 auto;
+    align-items: baseline;
+
+    @include respond-to("tablet") {
+        width: 40vw;
+        height: 40vw;
+    }
+
+    @include respond-to("desktop") {
+        width: 25vw;
+        height: 25vw;
+    }
+
+    .slide {
+        width: 80vw;
+        height: var(--h);
+        --h: 80vw;
+        position: relative;
+        display: flex;
+        background-color: var(--background-color);
+
+        .lastImage {
+            display: flex;
+            position: relative;
+            align-self: center;
+            width: 100%;
+
+            .image {
+                position: static;
+                transform: none;
+                object-fit: contain;
+                max-height: var(--h);
+            }
+        }
+
+        @include respond-to("tablet") {
+            width: 40vw;
+            --h: 40vw;
+        }
+
+        @include respond-to("desktop") {
+            width: 25vw;
+            --h: 25vw;
+        }
+        .image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+        .horizontal {
+            height: auto;
+            width: 100%;
+        }
+        .vertical {
+            width: auto;
+            height: 100%;
+            max-width: 100%;
+        }
+        .last {
+            position: absolute;
+            top: 0;
+            left: 5%;
+            width: 2.5rem;
+            height: 2.5rem;
+            z-index: 3000;
+        }
+    }
+}
+.wrapper.GachaCarousel {
+    margin-bottom: 1rem;
+    .carouselSmallWrapper {
+        margin-bottom: 1rem !important;
+        :global {
+            .swiper-container {
+                .swiper-pagination.swiper-pagination-bullets {
+                    bottom: 0rem;
+                }
+            }
+        }
+    }
+    .carouselWrapper {
+        width: 100vw;
+        max-width: 100%;
+        margin: 0 auto;
+        align-items: baseline;
+
+        :global {
+            .swiper-slide {
+                width: 300px;
+            }
+        }
+
+        @include respond-to("tablet") {
+            width: 100%;
+            height: 40vw;
+        }
+
+        @include respond-to("desktop") {
+            height: 25vw;
+        }
+    }
+    :global {
+        .swiper-container {
+            width: 100%;
+            height: auto;
+            padding-bottom: 1.5rem;
+        }
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 250px;
+            height: auto;
+            max-width: 100%;
+            .swiper-slide-shadow-left,
+            .swiper-slide-shadow-right {
+                display: none;
+            }
+        }
+    }
+}
+:global {
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+    }
+}
+:global {
+    .swiper-container {
+        width: 100%;
+        height: auto;
+        padding-bottom: 20px !important;
+        .swiper-pagination.swiper-pagination-bullets {
+            bottom: 0rem;
+            .swiper-pagination-bullet {
+                background-color: var(--text-color);
+                opacity: 0.25;
+            }
+            .swiper-pagination-bullet-active {
+                opacity: 1;
+                background-color: var(--text-color);
+            }
+        }
+    }
+}
+
+.dotSmallWrapper {
+    justify-content: left;
+    margin: 0 auto;
+    margin-top: 1rem;
+    .dots {
+        justify-content: center;
+        * {
+            border-radius: 30%;
+            padding: 1px;
+            *::before {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: var(--text-color);
+            }
+        }
+    }
+}
+
+.dotWrapper {
+    justify-content: left;
+    margin-top: 2rem;
+    /*padding-left: 3rem;*/
+    z-index: 3000;
+    .dots {
+        justify-content: center;
+        * {
+            border-radius: 50%;
+            padding: 2px;
+            *::before {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: var(--text-color);
+            }
+        }
+    }
+    @include respond-to("desktop") {
+        padding-left: 1rem;
+    }
+}

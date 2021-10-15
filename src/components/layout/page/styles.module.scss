@@ -1,0 +1,28 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/layout.scss';
+
+.container {
+  position: relative;
+  width: 100%;
+  max-height: calc(100vh - 55px);
+  overflow-y: scroll;
+  margin-top: 55px;
+  
+  >div{
+    padding: 100px 0;
+    padding-top: 45px;
+    position: relative;
+    min-height: calc(100vh - 55px);
+  }
+
+  &.noPadding {
+    padding: 0px 0;
+  }
+
+  &.noBottomPadding {
+    padding: 100px 0 0px 0;
+  }
+}
+:root{
+  overflow-y: hidden;
+}

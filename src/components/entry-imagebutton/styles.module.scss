@@ -1,0 +1,199 @@
+.wrapper {
+  position: relative;
+  padding: 0px 16px 0px 16px;
+  margin: 0 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  
+  .champion {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+    display: block; 
+  }
+  
+  .link{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 500px;
+    height: auto;
+    z-index: 200;
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5rem;
+    
+    .square {
+      position: relative;
+      width: 100%;
+      &:after {
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+      }
+      
+      >div{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        border: 1px solid var(--border-color);
+        border-radius: 0.5rem;
+        
+        hr{
+          transform: rotate(-45deg);
+            top: 50%;
+            left: -10%;
+            position: absolute;
+            height: 1px;
+            width: 120%;
+            background-color: var(--border-color);
+            border: 0;
+            z-index: 1000;
+        }
+
+        >div{
+          cursor: pointer;
+          background-repeat: no-repeat;
+          width: 50%;
+          height: 45%;
+          position: absolute;
+          display: flex;
+        }
+      }
+    }
+    
+    
+    .surf {
+      background-image: url('./img/akaS_dark_surf_XL.svg');
+      background-size: 45%;
+      background-position: bottom;
+      text-align: left;
+      align-items: flex-start;
+      top: 10%;
+      left: 0%;
+      padding-left: 10%;
+      padding-top: 10%;
+    }
+    .mint {
+      background-image: url('./img/akaS_dark_mint_XL.svg');
+      background-size: 40%;
+      background-position: top;
+      text-align: right;
+      align-items: flex-end;
+      justify-content: flex-end;
+      right: 0%;
+      bottom: 0%;
+      padding-right: 10%;
+      padding-bottom: 10%;
+    }
+
+    .tagArea{
+      margin: 2rem 0;
+      display: flex;
+      width: 100%;
+
+      .tag{
+        width: 100%;
+        height: 60px;
+        background-color: transparent;
+        border: 1px solid var(--border-color);
+        border-radius: 0.5rem;
+        padding: 0.5rem 0.5rem 0.5rem 3.5rem;
+        color: var(--text-color);
+      }
+      .tag:focus { outline: none; }
+      .tag:-webkit-autofill{
+        -webkit-text-fill-color: var(--text-color);
+        transition: background-color 9999999s ease-in-out 0s;
+      }
+      
+      .icon{
+          z-index: 1000;
+        margin: auto 1rem;
+        width: 2rem;
+        height: 2rem;
+        background-image: url('./img/akaS_web_tag_XL_dark.png');
+        background-size: contain;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        border: 0;
+        margin-right: -3rem;
+      }
+    }
+  }
+  
+  //@media screen and (max-width: 80em) {
+  //  .link{
+  //    width:100%;
+  //  }
+  //}
+  //@media screen and (max-width: 60em) {
+  //  .link{
+  //    width:45vw;
+  //  }
+  //}
+  //@media screen and (max-width: 40em) {
+  //  .link{
+  //    margin-top: 20px;
+  //    width:60vw;
+  //  }
+  //}
+
+  .second {
+    position: absolute;
+    z-index: 2;
+    height: 40%;
+    left: 55%;
+    top:45px;
+
+  }
+  .third{
+  
+    position: absolute;
+    z-index: 2;
+    height: 50%;
+    left: -2%;
+    top:30%;
+  }
+  .fourth{
+    position: absolute;
+    z-index: 2;
+    height: 40%;
+    right: 0px;
+    bottom:0%;
+  }
+
+
+
+}
+:global(.light){
+  .link{
+    .tagArea{
+      .icon{
+        background-image: url('./img/akaS_web_tag_XL_light.png');
+      }
+    }
+    .surf{
+      background-image: url('./img/akaS_light_surf_XL.svg');
+    }
+    .mint{
+      background-image: url('./img/akaS_black_mint_XL.svg');
+    }
+  }
+}
+

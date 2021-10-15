@@ -1,0 +1,174 @@
+@import "../../styles/layout.scss";
+@import "../../styles/variables.scss";
+
+.page {
+    position: relative;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    > div {
+        padding: 1rem;
+    }
+    @media (max-width: 600px) {
+        flex-direction: column;
+    }
+}
+.title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    .titleTime {
+        margin-left: 1rem;
+        display: inline-block;
+    }
+}
+
+.buttons {
+    display: flex;
+    width: 100%;
+
+    // position: absolute;
+    // bottom: -5rem;
+    // right: 0;
+
+    > div {
+        width: 100%;
+        // padding: 1rem 1rem;
+        display: inline-grid;
+        grid-template-columns: repeat(2, auto);
+        justify-items: stretch;
+        align-items: center;
+        margin-left: auto;
+
+        @include respond-from("phone") {
+            display: grid;
+            margin-left: 0;
+            width: 100%;
+        }
+        .bidder {
+            display: flex;
+            width: 100%;
+            margin: 0 -0.25rem;
+            > button {
+                white-space: nowrap;
+            }
+        }
+    }
+    @include respond-from("phone") {
+        position: static;
+        width: 100%;
+    }
+    button {
+        text-align: center;
+        border: 1px solid var(--text-color);
+        color: var(--text-color);
+        border-radius: 0.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        margin: 1rem 0.25rem;
+        width: 95%;
+        cursor: pointer;
+        &:active {
+            color: var(--background-color);
+            background-color: var(--text-color);
+        }
+    }
+    .buttonPrice {
+        // background-color: aqua;
+        .price {
+            display: inline-block;
+            margin-right: 1rem;
+            .digit {
+                font-size: 1.5rem;
+                margin-left: 0.5rem;
+                margin-right: 0.2rem;
+            }
+        }
+    }
+}
+.text {
+    opacity: 0.7;
+    margin-bottom: 1rem;
+}
+.price {
+    margin-right: 0.5rem;
+}
+.recordList {
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    padding-top: 2rem;
+    min-height: 200px;
+    margin: 3rem 0;
+
+    @media (max-width: 600px) {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+.recordItem {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+
+    a {
+        opacity: 0.5;
+        color: var(--text-color);
+        text-decoration: underline;
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    .item {
+        //position: absolute;
+        display: flex;
+        //bottom: 6px;
+        //right: 6px;
+        // height: 50px;
+        padding: 0px 20px 0px 20px;
+        // line-height: 50px;
+        align-items: right;
+        justify-content: space-between;
+    }
+}
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--border-color);
+    z-index: 1000;
+    display: flex;
+    padding: 1rem;
+    /*max-height: 100vh;
+      overflow-y: scroll;*/
+}
+.bidModal {
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    max-width: 500px;
+    transform: translate(-50% -50%);
+    border-radius: 1rem;
+    padding: 1rem 0;
+    > div {
+        overflow-y: scroll;
+        padding: 0 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    > button {
+        align-self: flex-end;
+        margin: -1rem 0;
+        padding: 1rem;
+        color: var(--text-color);
+    }
+}
+

@@ -1,0 +1,395 @@
+{
+  "title": "akaSwap",
+  "paragraphs": [
+    "We are committed to building a simple, friendly, open and green NFT trading platform, so that everyone can easily create, trade, appreciate, promote, and collect various NFT valuable assets from all over the world.",
+    "akaSwap hopes to help artists obtain new sources of income and provide collectors with a place to store and trade artworks. Artists can auction their creations or sell them at a customized price.",
+    ""
+  ],
+  "akaobj":{
+    "title":"What is akaOBJ?",
+    "description":"The NFT (Non-fungible Token) minted on akaSwap is called akaOBJ. It can be in various forms such as pictures, videos, sounds, visual arts, etc. You can trade freely in aksSwap, and you will also get akaDAO."
+  },
+  "akaDAO":{
+    "title":"What is akaDAO？",
+    "images":[
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "description":[
+      "Custom non-fungible token when you buy or sell NFT. The purpose is to create an economic cycle with the akaSwap platform",
+      "It is an FA2 Token, with a max circulation of 1,200,000. It is fixed supply. It can be broken down to 6 decimal places.",
+      "Assigning rules: akaDAO is assigned in five stages, with 100,000 akaDAO assigned in each stages",
+      "After each transaction, akaDAO will be issued to buyers and issuers according to a certain percentage of the price (a single transaction exceeding 50xtz will be calculated as 50xtz)",
+      "The percentage mentioned above will decrease as the stage progresses",
+      "In order to encourage everyone to participate in gacha event, the ratio of akaDAO issued by gacha is higher than other transactions.",
+      "Making gacha for akaOBJ costs akaDAO. In the future, we may also use akaDAO as a ticket for special events.",
+      "The akaDAO reserved by the platform will also be distributed to everyone in the form of rewards in the future."
+    ]
+  },
+  "quickstart":"Quick start",
+    "mintNFT":{
+    "title":"How to mint akaOBJ?",
+    "images":[
+      "./imgs/en-sync.png",
+      "./imgs/en-make-nft-1.png",
+      "./imgs/en-make-nft-2.png",
+      "./imgs/en-make-nft-2-1.png",
+      "./imgs/en-make-nft-2-2.png",
+      "./imgs/en-make-nft-3.png",
+      "./imgs/en-tezos-comeout.png",
+      "./imgs/en-mypage-creation.png"
+    ],
+    "mintNFTDescription": [
+      "Make sure you are synced.",
+      "Press the make button in menu, choose NFT.",
+      "Give it a title, description and price...etc, choose whether to turn on royalties share",
+      "Turn on the royalties share, you have to add co-creator",
+      "Enter the co-creator's wallet address, and set share(%)",
+      "Press the preview button to preview your akaOBJ.",
+      "Press the mint button, Approve from your wallet, and confirm the Tezos transaction",
+      "It usually takes a little time for the akaOBJ to appear in the marketplace and your creations page"
+    ]
+  },
+  "mintInteractiveNFT":{
+    "title":"How to mint interactive akaOBJ?",
+    "images":[
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "mintInteractiveNFTDescription": [
+      "The process is the same as minting an ordinary akaOBJ, but please pay attention to the following matters.",
+      "Prepare your file and please compress it into .zip format before uploading",
+      "The main file in your project needs to be called index.html. Make sure all paths referenced in your code are relative",
+      "Your work is required to have a cover image. It can be a JPEG, PNG, or GIF saved in your folder. In the <head> tag of your index.html file, add the following meta tag, replacing the value of the property attribute with the relative path to your cover image:",
+      "Please make sure all the needed datas is in your folder.",
+      "Here are a few sample files for reference: "
+    ]
+  },  
+  "swapNFT":{
+    "title":"How to swap akaOBJ?",
+    "images":[
+      "./imgs/en-sync.png",
+      "./imgs/en-swap-1.png",
+      "./imgs/en-swap-2.png",
+      "./imgs/en-swap-2-2.png",
+      "",
+      "./imgs/en-tezos-comeout.png"
+    ],
+    "swapNFTDescription": [
+      "Make sure you are synced.",
+      "On the independent page of the akaOBJ you own, Press the [swap] button",
+      "Give it amount and price, choose whether to turn on the swap share, if you do not need to open the sales profit sharing, skip to step 5",
+      "If you turn on the swap share, please fill in the sharer's wallet address and share(%)",
+      "Press the [swap it] button",
+      "Approve from your wallet, and confirm the Tezos transaction."
+    ]
+  },
+  "cancelswapNFT":{
+    "title":"How to cancel swapped akaOBJ?",
+    "images":[
+      "./imgs/en-sync.png",
+      "./imgs/en-cancelswap.png",
+      "./imgs/en-tezos-comeout.png"
+    ],
+    "cancelswapNFTDescription": [
+      "Make sure you are synced.",
+      "On the independent page of the akaOBJ you own, Press the [cancel] button, Approve from your wallet, and confirm the Tezos transaction.",
+      "This akaOBJ will be returned as not for sale"
+    ]
+  },
+  "buyNFT":{
+    "title":"How to buy akaOBJ?",
+    "images":[
+        "./imgs/en-sync.png",
+        "./imgs/en-buyNFT.png",
+        "./imgs/en-tezos-comeout.png",
+        "./imgs/en-mypage-collection.png"
+    ],
+    "buyNFTDescription": [
+      "Make sure you are synced.",
+      "Click [collect] or [buy] on the independent page of the akaOBJ ",
+      "Approve from your wallet, and confirm the Tezos transaction.",
+      "After you buy it, you can see it on the \"collection\" tab in My Page"
+    ]
+  },
+  "burnNFT":{
+    "title":"How to burn akaOBJ?",
+    "images":[
+      "./imgs/en-sync.png",
+      "./imgs/en-burn-1.png",
+      "./imgs/en-burn-2.png",
+      "./imgs/en-comfirm-burn.png",
+      "./imgs/en-tezos-comeout.png"
+    ],
+    "burnNFTDescription": [
+    "Make sure you are synced.",
+    "On the independent page of the akaOBJ you own, Press the [burn] button",
+    "Set how many akaOBJs you want to burn, and Click [burn it].",
+    "make sure you really want to burn it, click [comfirm]",
+    "Approve from your wallet, and confirm the Tezos transaction."]
+    }, 
+  "bundle":"Bundle",
+  "mintbundle":{
+    "title":"How to make a bundle?",
+    "images":[
+      "./imgs/en-sync.png",
+      "./imgs/en-make-bundle-1.png",
+      "./imgs/en-make-bundle-3.png",
+      "./imgs/en-make-bundle-4.png",
+      "./imgs/en-tezos-comeout.png",
+      "./imgs/en-mypage-colletion.png"
+    ],
+    "mintbundleDescription": [
+      "Make sure you are synced.",
+      "Press the make button in menu, choose bundle.",
+      "Select the items to be packaged and set the editions",
+      "Give it title, description, amount and price.",
+      "Press the next button, Approve from your wallet, and confirm the Tezos transaction.",
+      "It usually takes a little time for the akaOBJ to appear in the marketplace and your gacha&bundle page"
+    ]
+  },
+  "gacha":"Gacha",
+  "gachastage": {
+    "title": "Gacha stage",
+    "gachastageDescription": [
+        "Policy varies based on diffrent gacha stage, see more information from → "
+    ]
+  },
+  "mintgacha":{
+    "title":"How to make a gacha ?",
+    "gachaStage": [
+      "Note: Policy varies based on different ",
+      "Gacha Stage."
+    ],
+    "images":[
+      "./imgs/en-sync.png",
+      "./imgs/en-make-gacha-1.png",
+      "./imgs/en-make-gacha-3.png",
+      "./imgs/en-make-gacha-4.png",
+      "./imgs/en-make-gacha-5.png",
+      "./imgs/en-tezos-comeout.png",
+      "./imgs/en-mypage-colletion.png"
+    ],
+    "mintgachaDescription": [
+      "Make sure you are synced.",
+      "Press the make button in menu, choose gacha.",
+      "Select the items to be packaged and set the editions",
+      "Select the last one prize.",
+      "Give it title, description, duration and price.",
+      "Press the next button, Approve from your wallet, and confirm the Tezos transaction.",
+      "It usually takes a little time for the akaOBJ to appear in the marketplace and your gacha&bundle page"]
+    },
+    "auction":"Auction",
+    "auctionakaOBJ":{
+    "title":"How to auction my akaOBJ?",
+    "images":[
+      "./imgs/en-sync.png",
+      "./imgs/en-auction-1.png",
+      "./imgs/en-auction-2.png",
+      "./imgs/en-tezos-comeout.png"
+    ],
+    "auctionakaOBJDescription": [
+      "Make sure you are synced.",
+      "On the independent page of the akaOBJ you own, Press the [auction] button",
+      "Give it start price, purchase Price, bid Increment and duration.",
+      "Press [auction it], Approve from your wallet, and confirm the Tezos transaction."]           
+    },
+  "auctionothers":{
+    "title":"How to auction other's akaOBJ?",
+    "images":[
+      "./imgs/en-sync.png",
+      "./imgs/en-auction-it-1.png",
+      "./imgs/en-auction-it-2.png",
+      "./imgs/en-auction-it-3.png",
+      "./imgs/en-auction-it-4.png",
+      "./imgs/en-tezos-comeout.png"
+    ],
+    "auctionothersDescription": [
+      "Make sure you are synced.",
+      "Select the akaOBJ which you want to bid in the market place.",
+      "You can choose to buy at the purchase price (but the seller may not have the direct purchase function), or bid it.",
+      "The price displayed the lowest bidding price",
+      "Choose to pay in full or pay 10%.(you can bill  the remaining 90% before the end of the bidding or after win the bid, otherwise you will announce to abandon the bid 24 hours after closing the bid.)",
+      "Click [ Place bid ] Approve from your wallet, and confirm the Tezos transaction.",
+      "***Check your bid in the bid record for this akaOBJ",
+      "***You can repeatable bidding.",
+      "***If the full fee is not paid within 24 hours after winning the bid, creator can anounce this bid failed"
+    ]
+  },
+  "cancelauction":{
+    "title":"Discontinue my auction",
+    "images":[
+    "./imgs/en-discontinue-auction.png"
+    ],
+    "cancelauctionDescription": [
+      "If no one has placed a bid, you can remove the auction akaOBJ that has been put on the marketplace, and click the [Discontinue] button on the auction page of the akaOBJ， Approve from your wallet, and confirm the Tezos transaction."
+    ]
+  },
+  "buygacha":{
+    "title":"How to buy gachas?",
+    "images":[
+      "./imgs/en-sync.png",
+      "./imgs/en-buy-gacha-1.png",
+      "./imgs/en-tezos-comeout.png",
+      "./imgs/en-mypage-colletion.png"
+    ],
+    "buygachaDescription": [
+      "Make sure you are synced.",
+      "Click the gacha in 'Gacha List' page, set how many times you want to draw, and click the pay button",
+      "And the wallet windows would pop up, you have to confirm the payment",
+      "After finish payment, you would see it in the collection of My Page(may take a few seconds)"
+    ]
+  },
+  "buybundle":{
+    "title":"How to buy bundles?",
+    "images":[
+      "./imgs/en-sync.png",
+      "./imgs/en-buy-bundle-1.png",
+      "./imgs/en-tezos-comeout.png",
+      "./imgs/en-mypage-colletion.png"
+    
+    ],
+    "buybundleDescription": [
+      "Make sure you are synced.",
+      "Click the Bundle tab in the Marketplace, select the bundle you want to buy, and click it",
+      "And the wallet windows would pop up, you have to confirm the payment",
+      "After finish payment, you would see it in the collection of My Page(may take a few seconds)"
+    ]
+  },
+  "Howtoverifyaccount": {
+    "title": "How to verify your account?",
+    "images": [
+        "./imgs/tzkt-4.png",
+        "",
+        ""
+        
+        
+    ],
+    "HowtoverifyaccountDescription": [
+        "Fill out the TzKT form ",
+        "Follow Tzkt's Twitter account to confirm your ownership.",
+        "If you don't have twitter account, you can send the form to our email address "
+        
+    ]
+},
+  "Howtogettezos":{
+    "title":"How to get tezos? [only in testnets version]",
+    "images":[
+      "./imgs/en-florencetestnet-1.png",
+      "./imgs/en-florencetestnet-2.png",
+      "./imgs/en-florencetestnet-3.png",
+      "./imgs/en-florencetestnet-4.png",
+      "./imgs/en-florencetestnet-5.png",
+      "./imgs/en-florencetestnet-6.png"
+            
+    ],
+      "HowtogettezosDescription": [
+      "Donwload faucet file on ",
+      "Donwload the file.",
+      "Please switch to \"Florence testnet\"",
+      "Import account",
+      "Drop the faucet file on the area, and click submit.",
+      "It will create an new account, and already have test tezos."  
+    ]
+  },
+  "Howtousetags":{
+    "title":"How to find akaOBJ by using tags?",
+    "images":[
+      "./imgs/en-tag.png",
+      ""
+            
+    ],
+      "HowtousetagsDescription": [
+      "Type the keyword you want to search in the search field on the homepage tab, and press Enter on the keyboard ",
+      ""  
+    ]
+  },
+  "auctionrules":{
+    "title":"Auction rules",
+    "images":[
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "auctionrulesDescription": [
+      "purchase directly",
+      "◢if someone collect by purchase price directly, the trade is successful immediately, auction would be closed after akaOBJ is sent to collector.",
+      "auction closed & non-paying bid",
+      "◢The buyer conducts [full bidding] or [10% bidding and 90% price has been made up], after the bid closing time ends",
+      "The sale is established, and the bid cannot be abandoned",
+      "The buyer, the seller and the platform can announce the bid closing",
+      "◢The buyer conducts [10% bidding but 90% price has not been made up]",
+      "If the buyer does not make up within 24 hours after the bid closing time, both the seller and the platform can announce the buyer abandoning the bid",
+      "A quarter of the 10% fee will be transferred to the platform side, and the remaining 3/4 will be transferred to the seller",
+      "As long as no one announces the abandonment of the bid, the buyer still has the opportunity to make up 90% of the price",
+      "Abandoning bids will accumulate violation points, and those who violate the rules 3 times will not be able to bid.",
+      "Whether it is direct purchase or bid closing, the price will be the same as the ordinary transaction and the payment of copyright fees, platform fees, etc.", 
+      "Both of seller and collector would receive akaDAO according the final price"
+    ] 
+  },
+  "curate":{
+    "title":"How to vote for favorite akaOBJs?",
+    "images":[
+      "./imgs/en-curate-1.png",
+      "./imgs/en-curate-2.png"                
+    ],
+      "curateDescription": [
+      "You can click the icon to express your support for the work, and you will be charged 0.001 akaDAO at the same time.",
+      "The current number of votes will be shown on the left side of the icon."               
+    ]
+      
+  },
+  "royaltiesshare":{
+    "title":"What are \"royalty share\" and \"swap share\"?",
+    "images":[
+      "",
+      "",
+      "./imgs/en-royalty_share.png",
+      "",
+      "",
+      "",
+      "./imgs/en-swap_share.png",
+      ""                             
+    ],
+      "royaltiesshareDescription": [
+        "【Royalty share】",
+        "The copyright fee is the fee to the original author for each transaction. If you have a co-creator or partner, you can turn on the \"copyright fee sharing\" function to allocate the copyright fee. ",
+        "\"Copyright share profit\" must be set at the time of casting, for example:",
+        "* Please see \"How to cast a work?\" for the operation method",
+        "【Swap share】",
+        "Every time you sell a work, if you have a need to share revenue with your partners, you can turn on the \"Sales Profit Sharing\" function to distribute the revenue. (For example, you may be an art gallery that collaborates with artists)",
+        "\"Sales share profit\" must be set at the time of sale, for example:",
+        "* Please refer to \"How to sell works?\" for the operation method"              
+    ]
+      
+  },
+  "otherthings":"Other Instructions",
+  "webspeed":{
+    "title":"其他說明",
+    "images":[
+      "",
+      ""                
+    ],
+      "webspeedDescription": [
+        "【關於存取速度】",
+        "網站的資料放在ipfs星際網路，是去中心化的p2p存取系統，世界正在從web2到web3，所以存取速度有時比較不正常，請給區塊鏈一些時間。"                      
+    ]
+      
+  },
+  "giveMoney":{
+    "description" : "",
+    "linkName" : ""
+  }
+    
+}

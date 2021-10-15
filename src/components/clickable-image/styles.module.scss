@@ -1,0 +1,38 @@
+.container{
+  
+  input{
+    display: none;
+  }
+  input[type=checkbox]{
+    ~ label img {
+      transition: transform 0.25s ease;
+      cursor: zoom-in;
+      }
+  }
+  input[type=checkbox]:checked{
+
+    ~ label{
+      z-index: 1000;
+      position: relative;
+    }
+    
+    ~ label .overlay{
+      z-index: 1000;
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      background-color: var(--border-color);
+      width: 100vw;
+      height: 100vh;
+      transition: 0.5s;
+    }
+
+    ~ label img {
+      background-color: var(--background-color);
+      transform: scale(1.5);
+      cursor: zoom-out;
+      transition: 0.5s;
+    }
+  }
+  
+}
